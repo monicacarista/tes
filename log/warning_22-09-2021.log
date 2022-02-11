@@ -1,0 +1,175 @@
+WARNING 2021-09-22 08:38:47,001 log 332978 140273363449600 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-22 08:38:47,002 basehttp 332978 140273363449600 "GET /admin/form_produksi/reportshiftperkk/?p=0&user_group__id__exact=1 HTTP/1.1" 404 8775
+WARNING 2021-09-22 08:54:17,529 log 332978 140273891927808 Forbidden (CSRF token missing or incorrect.): /admin/form_produksi/productionform/15888/change/
+WARNING 2021-09-22 08:54:17,529 basehttp 332978 140273891927808 "POST /admin/form_produksi/productionform/15888/change/ HTTP/1.1" 403 2513
+WARNING 2021-09-22 10:06:22,675 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,747 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,855 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,874 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,901 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,920 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,946 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:22,969 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,001 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,024 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,052 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,072 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,101 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,123 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,148 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,168 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,195 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,214 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,246 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,266 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,291 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,314 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,349 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,379 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,407 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,430 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,458 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,477 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,504 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,524 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,549 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,573 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,601 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,620 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,650 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,670 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,697 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,720 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,747 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,766 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,798 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,822 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,847 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,867 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,894 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,916 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,942 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,965 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:23,993 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,015 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,042 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,063 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,089 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,111 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,141 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,160 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,186 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,210 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,236 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,260 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,287 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,309 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,335 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,355 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,383 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,406 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,432 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,453 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,480 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,501 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,526 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,551 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,578 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,598 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,624 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+WARNING 2021-09-22 10:06:24,644 basehttp 333283 140146712237824 "OPTIONS /static/admin/img/ HTTP/1.1" 404 1661
+ERROR 2021-09-22 11:29:43,252 log 333283 140146175366912 Internal Server Error: /admin/masterdata/masterbarang/autocomplete/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation 'like'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1650, in autocomplete_view
+    return AutocompleteJsonView.as_view(model_admin=self)(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/autocomplete.py", line 28, in get
+    context = self.get_context_data()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/generic/list.py", line 119, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(queryset, page_size)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/generic/list.py", line 69, in paginate_queryset
+    page = paginator.page(page_number)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation 'like'")
+ERROR 2021-09-22 11:29:43,622 basehttp 333283 140146175366912 "GET /admin/masterdata/masterbarang/autocomplete/?app_label=form_produksi&model_name=detailproductionresults&field_name=produk&term=%E2%81%B6 HTTP/1.1" 500 219241
+ERROR 2021-09-22 11:47:01,118 basehttp 333283 140147101267712 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2021-09-22 12:56:58,557 log 333283 140146166974208 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-09-22 12:56:58,557 basehttp 333283 140146166974208 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8755
+WARNING 2021-09-22 14:03:44,711 log 333283 140146141796096 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-09-22 14:03:44,711 basehttp 333283 140146141796096 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8755
+WARNING 2021-09-22 14:03:44,735 log 333283 140146141796096 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-09-22 14:03:44,735 basehttp 333283 140146141796096 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8755
+WARNING 2021-09-22 14:04:26,148 log 333283 140146150188800 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-09-22 14:04:26,148 basehttp 333283 140146150188800 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8755
+WARNING 2021-09-22 14:04:48,131 log 333283 140146150188800 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-09-22 14:04:48,131 basehttp 333283 140146150188800 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8755

@@ -1,0 +1,353 @@
+ERROR 2021-11-05 10:26:05,739 log 685990 140700087158528 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:26:05,746 basehttp 685990 140700087158528 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 117103
+ERROR 2021-11-05 10:29:42,223 log 686115 140026024457984 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'reportdowntimepermesin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'reportdowntimepermesin' is not a registered namespace
+ERROR 2021-11-05 10:29:42,226 basehttp 686115 140026024457984 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 118040
+ERROR 2021-11-05 10:31:04,648 log 686193 140380441278208 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/13/detail/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1988, in change_view
+    d
+NameError: name 'd' is not defined
+ERROR 2021-11-05 10:31:04,660 basehttp 686193 140380441278208 "GET /admin/form_produksi/reportdowntimepermesin/13/detail/? HTTP/1.1" 500 75712
+ERROR 2021-11-05 10:35:23,764 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:23,786 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__month=6&normalized_date__year=2021 HTTP/1.1" 500 107986
+ERROR 2021-11-05 10:35:29,771 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:29,781 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 108826
+ERROR 2021-11-05 10:35:31,045 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:31,046 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 108185
+ERROR 2021-11-05 10:35:44,022 log 686339 140116360673024 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:44,023 basehttp 686339 140116360673024 "GET /admin/form_produksi/reportdowntimepermesin/?user_group__id__exact=44 HTTP/1.1" 500 102690
+ERROR 2021-11-05 10:35:46,704 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:46,705 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 108185
+ERROR 2021-11-05 10:35:49,436 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:49,440 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 108322
+ERROR 2021-11-05 10:35:52,766 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:35:52,767 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 108322
+ERROR 2021-11-05 10:36:35,991 log 686339 140116343363328 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'form_produksi_reportdowntimepermesin_detail' not found. 'form_produksi_reportdowntimepermesin_detail' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:36:35,992 basehttp 686339 140116343363328 "GET /admin/form_produksi/reportdowntimepermesin/ HTTP/1.1" 500 108185
+ERROR 2021-11-05 10:37:02,820 log 686414 140142211274496 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = self.link_mesin_downtime(j, request)
+TypeError: link_mesin_downtime() takes 2 positional arguments but 3 were given
+ERROR 2021-11-05 10:37:02,823 basehttp 686414 140142211274496 "GET /admin/form_produksi/reportdowntimepermesin/?user_group__id__exact=44 HTTP/1.1" 500 87179
+ERROR 2021-11-05 10:37:15,898 log 686414 140142211274496 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = self.link_mesin_downtime(j, request)
+TypeError: link_mesin_downtime() takes 2 positional arguments but 3 were given
+ERROR 2021-11-05 10:37:15,900 basehttp 686414 140142211274496 "GET /admin/form_produksi/reportdowntimepermesin/?user_group__id__exact=44 HTTP/1.1" 500 87179
+ERROR 2021-11-05 10:37:17,878 log 686428 139789202589440 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1950, in changelist_view
+    td[i][0] = self.link_mesin_downtime(j, request)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2059, in link_mesin_downtime
+    args=(obj[1],)), req.GET.urlencode())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'change_view' not found. 'change_view' is not a valid view function or pattern name.
+ERROR 2021-11-05 10:37:17,881 basehttp 686428 139789202589440 "GET /admin/form_produksi/reportdowntimepermesin/?user_group__id__exact=44 HTTP/1.1" 500 101883
+ERROR 2021-11-05 12:24:53,530 exception 687402 139867659425536 Invalid HTTP_HOST header: 'localhost.localdomain:8000'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+WARNING 2021-11-05 12:24:53,644 log 687402 139867659425536 Bad Request: /
+WARNING 2021-11-05 12:24:53,645 basehttp 687402 139867659425536 "HEAD / HTTP/1.0" 400 63142
+WARNING 2021-11-05 13:14:13,805 basehttp 687402 139867902777088 "    c                           " 400 -
+WARNING 2021-11-05 14:16:55,837 log 687402 139867170248448 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-11-05 14:16:55,838 basehttp 687402 139867170248448 "GET /admin/form_produksi/reportshiftperkk/?start_time__month=4&start_time__year=2021 HTTP/1.1" 404 8588
+WARNING 2021-11-05 14:24:34,637 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:34,637 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:34,667 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:34,667 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:34,692 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:34,692 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:34,716 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:34,716 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:37,506 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:37,506 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:37,528 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:37,529 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:37,582 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:37,582 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:37,603 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:37,604 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:40,400 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:40,400 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:40,480 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:40,481 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:40,511 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:40,512 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+WARNING 2021-11-05 14:24:40,536 log 687402 139867187033856 Forbidden (CSRF token missing or incorrect.): /admin/
+WARNING 2021-11-05 14:24:40,537 basehttp 687402 139867187033856 "PROPFIND /admin/ HTTP/1.1" 403 2513
+ERROR 2021-11-05 16:18:11,179 basehttp 693905 140103460558592 You're accessing the development server over HTTPS, but it only supports HTTP.
+

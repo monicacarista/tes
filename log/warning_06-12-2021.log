@@ -1,0 +1,88 @@
+ERROR 2021-12-06 12:03:59,783 log 820376 140470415718144 Internal Server Error: /admin/form_produksi/reportperunit/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1898, in changelist_view
+    col["waste"]
+KeyError: 'waste'
+ERROR 2021-12-06 12:03:59,786 basehttp 820376 140470415718144 "GET /admin/form_produksi/reportperunit/?normalized_date__month=12&normalized_date__year=2021 HTTP/1.1" 500 90501
+WARNING 2021-12-06 13:43:52,199 log 820453 140660123932416 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-12-06 13:43:52,199 basehttp 820453 140660123932416 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8738
+ERROR 2021-12-06 13:45:21,641 basehttp 820453 140659499460352 "GET /admin/form_produksi/productionform/25507/change/ HTTP/1.1" 500 59
+ERROR 2021-12-06 13:51:21,991 basehttp 820453 140659474282240 "GET /admin/form_produksi/kk/autocomplete/?app_label=form_produksi&model_name=productionform&field_name=no_kk&term=2 HTTP/1.1" 500 59
+WARNING 2021-12-06 14:01:55,556 log 820453 140659499460352 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-12-06 14:01:55,558 basehttp 820453 140659499460352 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-12-06 14:28:01,675 log 820453 140660123932416 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-12-06 14:28:01,675 basehttp 820453 140660123932416 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8738
+WARNING 2021-12-06 14:28:32,696 log 820453 140659898967808 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-12-06 14:28:32,696 basehttp 820453 140659898967808 "GET /admin/form_produksi/reportshiftperkk/ HTTP/1.1" 404 8725
+WARNING 2021-12-06 15:05:32,465 log 820453 140659882182400 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2021-12-06 15:05:32,466 basehttp 820453 140659882182400 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 8738
+WARNING 2021-12-06 15:11:26,348 log 820453 140659457496832 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-12-06 15:11:26,349 basehttp 820453 140659457496832 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+ERROR 2021-12-06 15:55:56,154 basehttp 820453 140658887087872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 15:55:56,162 basehttp 820453 140658887087872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 15:55:57,900 basehttp 820453 140658878695168 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 15:55:57,901 basehttp 820453 140658887087872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 15:55:57,909 basehttp 820453 140658887087872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 15:55:57,929 basehttp 820453 140658887087872 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 16:40:49,744 basehttp 820453 140658341824256 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-12-06 17:57:00,046 basehttp 820453 140659474282240 You're accessing the development server over HTTPS, but it only supports HTTP.
+

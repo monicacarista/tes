@@ -1,0 +1,91 @@
+{% extends "admin/change_form.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block after_related_objects %}
+<h1>Raw Material dan Finished Good</h1>
+<div style="overflow: scroll; display: flex; margin-right: auto;">
+    <div style="margin-right: auto;">
+        <h2>Raw Material : {{summary.rm | floatformat:2 | intcomma }} kg</h2>
+        <table id="rm">
+            <thead>
+                <tr>
+                    {% for fields in field_rm %}
+                    <th>
+                        <div class="text">
+                            <a href="#">{{fields | capfirst}}</a>
+                        </div>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rm %}
+                <tr>
+                    <td class="table_compact"> {{ row.bahan__nama }} </td>
+                    <td class="table_number"> {{ row.rm | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-right: auto;">
+        <h2>Finished Good : {{summary.fg.weight | floatformat:2 | intcomma }} kg</h2>
+        <table id="fg">
+            <thead>
+                <tr>
+                    {% for fields in field_fg %}
+                    <th>
+                        <div class="text">
+                            <a href="#">{{fields}}</a>
+                        </div>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in fg %}
+                <tr>
+                    <td class="table_compact"> {{ row.produk__nama }} </td>
+                    <td class="table_number"> {{ row.qty | floatformat:2 | intcomma }} </td>
+                    <td class="table_number"> {{ row.fg | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-right: auto;">
+        <h2>Byproduct : {{summary.bp | floatformat:2 | intcomma }} kg</h2>
+        <table id="Byproduct">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="text">
+                            <a href="#">Byproduct</a>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="text">
+                            <a href="#">Jumlah</a>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in byproduct.items %}
+                <tr>
+                    <td class="table_compact"> {{ key | capfirst }} </td>
+                    <td class="table_number"> {{ value | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% load static %}
+{% endblock %}

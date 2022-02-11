@@ -1,0 +1,7 @@
+{% extends "admin/report_table.html" %}
+{% load cl_summary %}
+
+{% block result_list %}
+{{ block.super }}
+{% totals_row cl %}
+{% endblock %}

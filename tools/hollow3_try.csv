@@ -1,0 +1,6 @@
+id,tanggal,shift,kombinasi,kk,cleaning,trial,rm,mesin,fg_item,fg_qty,berat_unit,fg,hold,reject,waste,trimming,scrap_usage,dl,eff_hour,dt_produksi,dt_teknik,warna,panjang
+1,11/06/2021,1,443581,WOL21F0039,FALSE,FALSE,0,31,25384,39,57.6,2246.4,0,0,0,0,0,3,8,0,0,blue op,12
+2,11/06/2021,1,443581,WOL21F0039,FALSE,FALSE,0,31,25330,20,28.8,576,0,0,0,0,0,3,0,0,0,blue op,6
+3,11/06/2021,2,443582,WOL21F0039,FALSE,FALSE,0,31,25330,70,28.8,2016,0,484,0,0,0,3,8,0,0,blue op,6
+4,11/06/2021,3,443583,WOL21F0039,FALSE,FALSE,0,31,25330,51,28.8,1468.8,0,290,0,0,0,3,8,0,0,blue op,6
+5,11/06/2021,3,443583,WOL21F0039,FALSE,FALSE,0,31,25671,40,19.2,768,0,0,0,0,0,3,0,0,0,blue op,4

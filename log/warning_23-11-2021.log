@@ -1,0 +1,93 @@
+ERROR 2021-11-23 16:03:55,157 log 551023 140410613126912 Internal Server Error: /admin/form_produksi/machinedailytime/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 3039, in changelist_view
+    d
+NameError: name 'd' is not defined
+ERROR 2021-11-23 16:03:55,160 basehttp 551023 140410613126912 "GET /admin/form_produksi/machinedailytime/?normalized_date__month=11&normalized_date__year=2021 HTTP/1.1" 500 99321
+ERROR 2021-11-23 16:07:45,608 log 551163 140487572305664 Internal Server Error: /admin/form_produksi/machinedailytime/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 3038, in changelist_view
+    td[i['y']][i['x']][2] = daftar_x[i['x']].split('/') + i['machine__id']
+AttributeError: 'datetime.date' object has no attribute 'split'
+ERROR 2021-11-23 16:07:45,611 basehttp 551163 140487572305664 "GET /admin/form_produksi/machinedailytime/?normalized_date__month=11&normalized_date__year=2021 HTTP/1.1" 500 99608
+ERROR 2021-11-23 16:09:44,035 log 551222 140146762561280 Internal Server Error: /admin/form_produksi/machinedailytime/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 3045, in changelist_view
+    s
+NameError: name 's' is not defined
+ERROR 2021-11-23 16:09:44,039 basehttp 551222 140146762561280 "GET /admin/form_produksi/machinedailytime/?normalized_date__month=11&normalized_date__year=2021 HTTP/1.1" 500 100196
+ERROR 2021-11-23 16:10:32,367 log 551222 140146762561280 Internal Server Error: /admin/form_produksi/machinedailytime/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 3045, in changelist_view
+NameError: name 's' is not defined
+ERROR 2021-11-23 16:10:32,369 basehttp 551222 140146762561280 "GET /admin/form_produksi/machinedailytime/?normalized_date__month=11&normalized_date__year=2021 HTTP/1.1" 500 100191
+WARNING 2021-11-23 16:34:10,916 log 551710 140435779458816 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-23 16:34:10,918 basehttp 551710 140435779458816 "GET /admin/form_produksi/productionform/?machine__id__exact=6&user_group__id__exact=1 HTTP/1.1" 403 135

@@ -1,0 +1,8 @@
+WARNING 2022-01-11 13:10:29,154 log 1152620 140199166191360 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2022-01-11 13:10:29,154 basehttp 1152620 140199166191360 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown HTTP/1.1" 403 26
+WARNING 2022-01-11 13:15:14,464 log 1152620 140199447832320 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-11 13:15:14,464 basehttp 1152620 140199447832320 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-11 13:16:45,947 log 1152620 140199447832320 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-11 13:16:45,948 basehttp 1152620 140199447832320 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-11 14:44:41,043 log 1152620 140199199762176 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-11 14:44:41,044 basehttp 1152620 140199199762176 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692

@@ -1,0 +1,568 @@
+ERROR 2021-09-17 09:48:37,653 log 248967 140224270415616 Internal Server Error: /admin/form_produksi/reportbykk/4543/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:48:37,664 basehttp 248967 140224270415616 "GET /admin/form_produksi/reportbykk/4543/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:48:42,040 log 248967 140224278808320 Internal Server Error: /admin/form_produksi/reportbykk/4543/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:48:42,062 basehttp 248967 140224278808320 "GET /admin/form_produksi/reportbykk/4543/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:48:52,055 log 248967 140224278808320 Internal Server Error: /admin/form_produksi/reportbykk/4543/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:48:52,055 basehttp 248967 140224278808320 "GET /admin/form_produksi/reportbykk/4543/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:48:59,109 log 248967 140224270415616 Internal Server Error: /admin/form_produksi/reportbykk/4543/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:48:59,110 basehttp 248967 140224270415616 "GET /admin/form_produksi/reportbykk/4543/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:49:25,474 log 248967 140224270415616 Internal Server Error: /admin/form_produksi/reportbykk/4543/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:49:25,499 basehttp 248967 140224270415616 "GET /admin/form_produksi/reportbykk/4543/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:49:31,399 log 248967 140224270415616 Internal Server Error: /admin/form_produksi/reportbykk/4544/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:49:31,400 basehttp 248967 140224270415616 "GET /admin/form_produksi/reportbykk/4544/change/ HTTP/1.1" 500 116799
+ERROR 2021-09-17 09:50:21,386 log 248967 140224287463168 Internal Server Error: /admin/form_produksi/reportbykk/4514/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:50:21,396 basehttp 248967 140224287463168 "GET /admin/form_produksi/reportbykk/4514/change/ HTTP/1.1" 500 116790
+ERROR 2021-09-17 09:50:45,621 basehttp 248967 140224259401472 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-09-17 09:50:46,403 log 248967 140224287463168 Internal Server Error: /admin/form_produksi/reportbykk/4514/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 860, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 518, in get_form
+    return super(UnitSpecificModelAdmin, self).get_form(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 683, in get_form
+    if change and hasattr(request, 'user') and not self.has_change_permission(request, obj):
+TypeError: has_change_permission() takes 2 positional arguments but 3 were given
+ERROR 2021-09-17 09:50:46,404 basehttp 248967 140224287463168 "GET /admin/form_produksi/reportbykk/4514/change/ HTTP/1.1" 500 116790
+ERROR 2021-09-17 09:56:30,752 log 249095 140081597658880 Internal Server Error: /admin/form_produksi/productionform/15320/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1598, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, obj, change=True)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 797, in get_formsets_with_inlines
+    for inline in self.get_inline_instances(request, obj):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 599, in get_inline_instances
+    if not (inline.has_view_or_change_permission(request, obj) or
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 533, in has_view_or_change_permission
+    return self.has_view_permission(request, obj) or self.has_change_permission(request, obj)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 804, in has_change_permission
+    if obj.laporan.no_kk.aktif == "0":
+AttributeError: 'ProductionForm' object has no attribute 'laporan'
+ERROR 2021-09-17 09:56:30,754 basehttp 249095 140081597658880 "GET /admin/form_produksi/productionform/15320/change/ HTTP/1.1" 500 130080
+ERROR 2021-09-17 09:56:56,437 log 249095 140081597658880 Internal Server Error: /admin/form_produksi/productionform/15320/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1598, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, obj, change=True)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 797, in get_formsets_with_inlines
+    for inline in self.get_inline_instances(request, obj):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 599, in get_inline_instances
+    if not (inline.has_view_or_change_permission(request, obj) or
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 533, in has_view_or_change_permission
+    return self.has_view_permission(request, obj) or self.has_change_permission(request, obj)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 804, in has_change_permission
+    if obj.no_kk.aktif == "0":
+AttributeError: 'ProductionForm' object has no attribute 'laporan'
+ERROR 2021-09-17 09:56:56,439 basehttp 249095 140081597658880 "GET /admin/form_produksi/productionform/15320/change/ HTTP/1.1" 500 130193
+ERROR 2021-09-17 09:56:58,345 log 249108 140099838490368 Internal Server Error: /admin/form_produksi/productionform/15320/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1598, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, obj, change=True)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2064, in get_formset
+    can_delete = self.can_delete and self.has_delete_permission(request, obj)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 702, in has_delete_permission
+    if obj.laporan.no_kk.aktif == "0":
+AttributeError: 'ProductionForm' object has no attribute 'laporan'
+ERROR 2021-09-17 09:56:58,348 basehttp 249108 140099838490368 "GET /admin/form_produksi/productionform/15320/change/ HTTP/1.1" 500 131107
+ERROR 2021-09-17 09:57:45,280 log 249127 140188760491776 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 329, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 112, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 94, in management_form
+    code='missing_management_form',
+django.core.exceptions.ValidationError: ['ManagementForm data is missing or has been tampered with']
+ERROR 2021-09-17 09:57:45,444 basehttp 249127 140188760491776 "POST /admin/form_produksi/productionform/add/ HTTP/1.1" 500 155175
+WARNING 2021-09-17 10:01:50,086 log 249127 140187833186048 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-17 10:01:50,086 basehttp 249127 140187833186048 "GET /admin/form_produksi/reportshiftperkk/?p=2&start_time__month=7&start_time__year=2021 HTTP/1.1" 404 8797
+WARNING 2021-09-17 11:18:28,996 log 250429 140179905947392 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-17 11:18:28,996 basehttp 250429 140179905947392 "GET /admin/form_produksi/reportshiftperkk/?q=502 HTTP/1.1" 404 8749
+WARNING 2021-09-17 11:24:03,409 log 250429 140179947910912 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-17 11:24:03,410 basehttp 250429 140179947910912 "GET /admin/form_produksi/reportshiftperkk/?q=502 HTTP/1.1" 404 8749
+WARNING 2021-09-17 11:24:41,941 log 250429 140179905947392 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-17 11:24:41,942 basehttp 250429 140179905947392 "GET /admin/form_produksi/reportshiftperkk/?q=502 HTTP/1.1" 404 8749
+ERROR 2021-09-17 11:48:27,536 log 250429 140180297836288 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 329, in full_clean
+    for i in range(0, self.total_form_count()):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 112, in total_form_count
+    return min(self.management_form.cleaned_data[TOTAL_FORM_COUNT], self.absolute_max)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 94, in management_form
+    code='missing_management_form',
+django.core.exceptions.ValidationError: ['ManagementForm data is missing or has been tampered with']
+ERROR 2021-09-17 11:48:27,548 basehttp 250429 140180297836288 "POST /admin/form_produksi/productionform/add/ HTTP/1.1" 500 155772
+ERROR 2021-09-17 15:00:28,625 log 253244 139737356560128 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+ERROR 2021-09-17 15:00:28,628 basehttp 253244 139737356560128 "POST /admin/form_produksi/prefilledform/add/?no_kk=4462 HTTP/1.1" 500 138664
+ERROR 2021-09-17 15:01:23,715 log 253244 139737356560128 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+ERROR 2021-09-17 15:01:23,716 basehttp 253244 139737356560128 "POST /admin/form_produksi/prefilledform/add/?no_kk=4462 HTTP/1.1" 500 138664
+WARNING 2021-09-17 16:36:40,979 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/15069/change/
+WARNING 2021-09-17 16:36:40,980 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/15069/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:36:53,738 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/14444/change/
+WARNING 2021-09-17 16:36:53,739 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/14444/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:37:09,304 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/14444/change/
+WARNING 2021-09-17 16:37:09,304 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/14444/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:37:32,722 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/14444/change/
+WARNING 2021-09-17 16:37:32,723 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/14444/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:37:58,803 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-17 16:37:58,804 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/ HTTP/1.1" 404 8742
+WARNING 2021-09-17 16:38:00,293 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/13778/change/
+WARNING 2021-09-17 16:38:00,294 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/13778/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:38:03,833 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/13549/change/
+WARNING 2021-09-17 16:38:03,833 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/13549/change/ HTTP/1.1" 404 8781
+WARNING 2021-09-17 16:38:04,486 log 253244 139738413516544 Not Found: /admin/form_produksi/reportshiftperkk/13604/change/
+WARNING 2021-09-17 16:38:04,490 basehttp 253244 139738413516544 "GET /admin/form_produksi/reportshiftperkk/13604/change/ HTTP/1.1" 404 8781
+ERROR 2021-09-17 17:22:10,206 exception 253244 139738819827456 Invalid HTTP_HOST header: 'freeze.na4u.ru:80'. You may need to add 'freeze.na4u.ru' to ALLOWED_HOSTS.
+WARNING 2021-09-17 17:22:10,265 log 253244 139738819827456 Bad Request: /91.201.52.66:80
+WARNING 2021-09-17 17:22:10,911 basehttp 253244 139738819827456 "CONNECT 91.201.52.66:80 HTTP/1.1" 400 63279
+WARNING 2021-09-17 17:22:19,819 basehttp 253244 139738819827456 " P[É4B0 " 400 -
+ERROR 2021-09-17 17:22:20,238 exception 253244 139738819827456 Invalid HTTP_HOST header: 'freeze.na4u.ru'. You may need to add 'freeze.na4u.ru' to ALLOWED_HOSTS.
+WARNING 2021-09-17 17:22:20,295 log 253244 139738819827456 Bad Request: /http:/freeze.na4u.ru/ip.php
+WARNING 2021-09-17 17:22:20,675 basehttp 253244 139738819827456 "POST http://freeze.na4u.ru/ip.php?Z76675610160Q1 HTTP/1.1" 400 65038
+WARNING 2021-09-17 17:22:29,855 basehttp 253244 139738819827456 " " 400 -

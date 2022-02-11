@@ -1,0 +1,111 @@
+ERROR 2021-10-05 13:10:33,019 basehttp 588674 139858041083648 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-05 14:40:04,958 log 588674 139856994879232 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 217, in clean
+    durasi_form = calc_duration_from_dt(self.laporan.start_time, self.laporan.end_time)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 613, in calc_duration_from_dt
+    time = selesai - mulai
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2021-10-05 14:40:04,972 basehttp 588674 139856994879232 "POST /admin/form_produksi/prefilledform/add/?no_kk=5114 HTTP/1.1" 500 161901
+ERROR 2021-10-05 14:43:14,766 log 588674 139856994879232 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 217, in clean
+    durasi_form = calc_duration_from_dt(self.laporan.start_time, self.laporan.end_time)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 613, in calc_duration_from_dt
+    time = selesai - mulai
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2021-10-05 14:43:14,813 basehttp 588674 139856994879232 "POST /admin/form_produksi/prefilledform/add/?no_kk=5114 HTTP/1.1" 500 161882
+ERROR 2021-10-05 17:33:51,423 exception 588674 139858083047168 Invalid HTTP_HOST header: 'fingerprints.bablosoft.com:80'. You may need to add 'fingerprints.bablosoft.com' to ALLOWED_HOSTS.
+ERROR 2021-10-05 17:33:51,439 exception 588674 139858483877632 Invalid HTTP_HOST header: 'fingerprints.bablosoft.com'. You may need to add 'fingerprints.bablosoft.com' to ALLOWED_HOSTS.
+WARNING 2021-10-05 17:33:51,523 log 588674 139858083047168 Bad Request: /178.128.34.99:80
+WARNING 2021-10-05 17:33:51,543 log 588674 139858483877632 Bad Request: /http:/fingerprints.bablosoft.com/ip
+WARNING 2021-10-05 17:33:51,843 basehttp 588674 139858083047168 "CONNECT 178.128.34.99:80 HTTP/1.1" 400 63470
+WARNING 2021-10-05 17:33:51,851 basehttp 588674 139858483877632 "POST http://fingerprints.bablosoft.com/ip?Z76675610160Q1 HTTP/1.1" 400 65306
+WARNING 2021-10-05 17:33:56,021 basehttp 588674 139857607251712 " P²"c0 " 400 -
+WARNING 2021-10-05 17:34:01,040 basehttp 588674 139857607251712 " " 400 -
+WARNING 2021-10-05 17:46:30,795 basehttp 588674 139858483877632 "  /*à     Cookie: mstshash=Administr" 400 -

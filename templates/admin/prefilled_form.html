@@ -1,0 +1,7 @@
+{% extends "admin/shift_form_w_calc.html" %}
+
+{% load static %}
+{% block footer %}
+{{ block.super }}
+<script src="{% static 'js/std_weight.js' %}"></script>
+{% endblock %}

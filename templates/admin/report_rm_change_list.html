@@ -1,0 +1,110 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block extrahead %}
+{{ block.super }}
+{% endblock %}
+
+{% block content_title %}
+<h1> Raw Material Report</h1>
+Item Mode: {{ itemgroup_switch }}
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  <table id="result_list" class="display cell-border compact">
+    <thead class="alert-success">
+      <tr>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in summary %}
+      <tr class="{% cycle 'row1' 'row2' %}">
+        {% for data in row %}
+        {% if forloop.first %}
+        <td class="table_number">{{ data }}</td>
+        {% else%}
+        <td class="table_number">{{ data | intcomma }}</td>
+        {% endif %}
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="table_compact"><strong> Total </strong> </th>
+        {% for data in table_fields %}
+        {% if forloop.first %}
+        {% else%}
+        <th class="table_number"> <strong></strong></th>
+        {% endif %}
+        {% endfor %}
+      </tr>
+    </tfoot>
+  </table>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https:////cdn.datatables.net/plug-ins/1.10.25/api/sum().js"></script>
+<script type="text/javascript">
+  jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+      "date-range-pre": function ( a ) {
+          var monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+          return monthArr.indexOf(a); 
+      },
+      "date-range-asc": function ( a, b ) {
+          return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+      },
+      "date-range-desc": function ( a, b ) {
+          return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+      }
+  } );
+
+  var table = $('#result_list').DataTable({
+      pageLength: -1,
+      columnDefs: [
+        { type: 'date-range', targets: 0 }
+      ],
+      footerCallback: function(row, data, start, end, display) {
+        var api = this.api();
+        var N = {{ table_fields|length }} - 1;
+        var intVal = function ( i ) {
+                return typeof i === 'string' ?
+                    i.replace(/[\$,]/g, '')*1.00 :
+                    typeof i === 'number' ?
+                        i : 0;
+            };
+      
+        api.columns(Array.from({length: N}, (_, i) => i + 1), {
+          page: 'current'
+        }).every(function() {
+          var sum = this
+            .data()
+            .reduce(function(a, b) {
+              var x = intVal(a) || 0;
+              var y = intVal(b) || 0;
+              return x + y;
+            }, 0);
+          sum = sum.toLocaleString()
+          
+          $(this.footer()).html(sum);
+        });
+      }
+  }) 
+</script>
+{% endblock %}

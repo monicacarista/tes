@@ -1,0 +1,29 @@
+ERROR 2022-01-10 10:50:53,738 basehttp 1040415 139756881057536 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2022-01-10 13:15:42,117 log 1040415 139756444821248 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-10 13:15:42,117 basehttp 1040415 139756444821248 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-10 13:36:14,796 log 1040415 139755970860800 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-10 13:36:14,796 basehttp 1040415 139755970860800 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+ERROR 2022-01-10 13:45:53,754 basehttp 1040415 139756844865280 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-01-10 13:45:53,767 basehttp 1040415 139756844865280 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-01-10 13:45:57,077 basehttp 1040415 139756844865280 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-01-10 13:45:57,078 basehttp 1040415 139756881057536 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-01-10 13:45:57,091 basehttp 1040415 139756844865280 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-01-10 13:45:57,092 basehttp 1040415 139756881057536 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2022-01-10 13:54:07,458 log 1054456 140225444574976 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-10 13:54:07,459 basehttp 1054456 140225444574976 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-10 13:59:39,916 log 1054456 140225436182272 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2022-01-10 13:59:39,917 basehttp 1054456 140225436182272 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown HTTP/1.1" 403 26
+WARNING 2022-01-10 13:59:43,302 log 1054456 140225436182272 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2022-01-10 13:59:43,302 basehttp 1054456 140225436182272 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown&term=040 HTTP/1.1" 403 26
+WARNING 2022-01-10 13:59:46,534 log 1054456 140225436182272 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2022-01-10 13:59:46,534 basehttp 1054456 140225436182272 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown&term=040100 HTTP/1.1" 403 26
+WARNING 2022-01-10 13:59:47,446 log 1054456 140225436182272 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2022-01-10 13:59:47,446 basehttp 1054456 140225436182272 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown&term=0401006 HTTP/1.1" 403 26
+ERROR 2022-01-10 16:09:31,758 basehttp 1061345 139666258376448 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 500 59

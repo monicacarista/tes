@@ -1,0 +1,56 @@
+{% load i18n %}
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar"
+  aria-label="{% translate 'Toggle navigation' %}"></button>
+<nav class="sticky" id="nav-sidebar">
+  <div class="app-admin module">
+    <table>
+      <caption>
+        <a>Pengumuman</a>
+      </caption>
+
+      <tbody>
+        <tr class="model-logentry">
+          <th >Jika fitur pencarian item/ KK tidak berjalan, harap tekan Ctrl+F5</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% include 'admin/app_list.html' with app_list=available_apps show_changelinks=False %}
+  <div class="app-form_produksi module current-app">
+    <table>
+      <caption>
+        <a class="section" title="Definitions and Abbreviations">Glossarium</a>
+      </caption>
+      <tbody>
+        <tr>
+          <th scope="row">
+            List of terms in this website
+          </th>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>Avail</strong>: Availablility = <i>Eff Hour</i> / <i>Total Production Hour</i></li>
+      <li><strong>DT</strong>: Downtime</li>
+      <li><strong>Eff Hour</strong>: Effective production hour or actual real production time </li>
+      <li><strong>FG</strong>: Finished Good Produced</li>
+      <li><strong>FTY</strong>: First Time Yield = Percentage of finish good result compared to material used in one go
+        or <i>FG / (FG + Scrap + Waste)</i>
+      <li><strong>Hold</strong>: QC Hold, product hold by QC wait for quality decision</li>
+      <li><strong>OEE</strong>: Overall Equipment Effectiveness= <i>FTY</i> * <i>Avail</i> * <i>Perf</i></li>
+      <li><strong>Perf</strong>: Performance = percentage of actual output per effective hour divided by standard output
+        per hour. (<i>Actual output per hour</i> / <i>Standard output per hour</i>)</li>
+      <li><strong>RJ</strong>: Reject, product that does not pass quality requirement where the material can be re-used
+        for production.</li>
+      <li><strong>RM</strong>: Raw Material Used</li>
+      <li><strong>Scrap Chg</strong>: Scrap hasil - Scrap pakai</li>
+      <li><strong>Scrap Produced</strong>: Scrap produced from manufacturing process = <i>Trimming + Reject</i> </li>
+      <li><strong>Scrap Used</strong>: Scrap being used as Raw Material</li>
+      <li><strong>TR</strong>: Trimming of product where the material can be re-used for production.</li>
+      <li><strong>WS</strong>: Waste where material that cannot be re-used for production</li>
+      <li><strong>Idle Time</strong>: Total normal work hour - Production hour - Downtime</li>
+
+    </ul>
+  </div>
+</nav>

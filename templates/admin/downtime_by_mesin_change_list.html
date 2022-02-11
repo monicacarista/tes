@@ -1,0 +1,74 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block extrahead %}
+{{ block.super }}
+<style>
+  #result_list > thead > tr > td:nth-child(4){
+    border-right: double black;
+  }
+  
+  #result_list > thead > tr > th:nth-child(4){
+    border-right: double black;
+  }
+  
+  #result_list > tbody > tr > td:nth-child(4){
+    border-right: double black;
+  }
+  .results table thead tr:nth-child(2) th:first-child {
+    z-index: 11;
+    position: sticky;
+    left: 0;
+  }
+</style>
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  <table id="result_list" class="display cell-border compact">
+    <thead class="alert-success">
+      <tr>
+        {% for fields in table_fields|slice:":4" %}
+        <td>
+          
+        </td>
+        {% endfor %}
+        <th colspan="10">
+          <div class="text">
+            <a>Downtime Details</a>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in summary %}
+      <tr class="{% cycle 'row1' 'row2' %}">
+        {% for data in row %}
+        <td class="table_number"> {{ data }} </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="table_compact"><strong> Total </strong> </th>
+        {% for data in summary_total%}
+        <th class="table_number"> <strong>{{ data | intcomma }} </strong></th>
+        {% endfor %}
+      </tr>
+    </tfoot>
+  </table>
+</div>
+{% endblock %}

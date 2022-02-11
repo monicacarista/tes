@@ -1,0 +1,705 @@
+ERROR 2021-09-13 09:02:14,985 log 130447 139757967374080 Internal Server Error: /admin/form_produksi/kk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1809, in changelist_view
+    **self.admin_site.each_context(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 312, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:14,999 basehttp 130447 139757967374080 "GET /admin/form_produksi/kk/ HTTP/1.1" 500 123142
+ERROR 2021-09-13 09:02:15,819 log 130447 139757947442944 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:15,840 basehttp 130447 139757947442944 "GET /admin/ HTTP/1.1" 500 109375
+ERROR 2021-09-13 09:02:16,197 log 130447 139757967374080 Internal Server Error: /admin/form_produksi/kk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1809, in changelist_view
+    **self.admin_site.each_context(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 312, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:16,198 basehttp 130447 139757967374080 "GET /admin/form_produksi/kk/ HTTP/1.1" 500 123142
+ERROR 2021-09-13 09:02:17,692 log 130447 139757922002688 Internal Server Error: /admin/form_produksi/reportbykk/4504/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 828, in change_view
+    request, object_id, form_url, extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1624, in _changeform_view
+    **self.admin_site.each_context(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 312, in each_context
+    'available_apps': self.get_app_list(request),
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:17,731 basehttp 130447 139757922002688 "GET /admin/form_produksi/reportbykk/4504/change/?_changelist_filters=aktif__exact%3D0 HTTP/1.1" 500 141838
+ERROR 2021-09-13 09:02:20,266 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:20,267 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:21,573 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:21,575 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:23,098 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:23,099 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:25,191 log 130447 139757947442944 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:25,192 basehttp 130447 139757947442944 "GET /admin/ HTTP/1.1" 500 109512
+ERROR 2021-09-13 09:02:29,777 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:29,778 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:31,640 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:31,641 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:35,534 log 130447 139757967374080 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:35,535 basehttp 130447 139757967374080 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:02:41,204 log 130447 139757430503168 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 251, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 502, in index
+    app_list = self.get_app_list(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 485, in get_app_list
+    app_dict = self._build_app_dict(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 434, in _build_app_dict
+    perms = model_admin.get_model_perms(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 660, in get_model_perms
+    'change': self.has_change_permission(request),
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1330, in has_change_permission
+    if obj.no_kk.aktif == 0:
+AttributeError: 'NoneType' object has no attribute 'no_kk'
+ERROR 2021-09-13 09:02:41,215 basehttp 130447 139757430503168 "GET /admin/ HTTP/1.1" 500 108697
+ERROR 2021-09-13 09:30:20,510 basehttp 130470 139893250451200 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-09-13 09:58:25,651 log 130470 139893745358592 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/4/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1784, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'tipe' into field. Choices are: byproduct, catatan, created_at, detaildowntime, detailmaterialconsumption, detailpackagingusage, detailproductionresults, dl_avail, downtime, earn_hour, effective_hour, end_time, fg, fg_lm, fg_m2, fg_mass_std, fg_qty, foreman, foreman_id, group_barang, group_barang_id, hold, id, machine, machine_id, no_kk, no_kk_id, operator, operator_id, output_std, planned_down_hour, raw_material, reject, reject_eqv, scrap_hasil, scrap_usage, shift, start_time, tipe_barang, tipe_barang_id, total_hour, total_output, trimming, user_group, user_group_id, waste
+ERROR 2021-09-13 09:58:25,654 basehttp 130470 139893745358592 "GET /admin/form_produksi/reportdowntimepermesin/4/change/?start_time__month=9&start_time__year=2021&tipe__id=2 HTTP/1.1" 500 132243
+ERROR 2021-09-13 10:31:12,934 log 133497 139858479666944 Internal Server Error: /admin/form_produksi/reportshiftperkk/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+ERROR 2021-09-13 10:31:12,976 basehttp 133497 139858479666944 "POST /admin/form_produksi/reportshiftperkk/add/?_changelist_filters=machine__id__exact%3D4%26user_group__id__exact%3D1 HTTP/1.1" 500 135807
+ERROR 2021-09-13 13:11:50,019 exception 133497 139858982180608 Invalid HTTP_HOST header: 'ip.bablosoft.com:80'. You may need to add 'ip.bablosoft.com' to ALLOWED_HOSTS.
+WARNING 2021-09-13 13:11:50,089 log 133497 139858982180608 Bad Request: /142.93.134.128:80
+WARNING 2021-09-13 13:11:50,507 basehttp 133497 139858982180608 "CONNECT 142.93.134.128:80 HTTP/1.1" 400 63331
+WARNING 2021-09-13 13:11:53,607 basehttp 133497 139858488059648 " P]0 " 400 -
+ERROR 2021-09-13 13:11:55,074 exception 133497 139858488059648 Invalid HTTP_HOST header: 'ip.bablosoft.com'. You may need to add 'ip.bablosoft.com' to ALLOWED_HOSTS.
+WARNING 2021-09-13 13:11:55,142 log 133497 139858488059648 Bad Request: /http:/ip.bablosoft.com/
+WARNING 2021-09-13 13:11:55,579 basehttp 133497 139858488059648 "POST http://ip.bablosoft.com/?Z76675610160Q1 HTTP/1.1" 400 65024
+WARNING 2021-09-13 13:11:58,653 basehttp 133497 139858982180608 " " 400 -
+ERROR 2021-09-13 14:12:22,878 log 133497 139858471274240 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'datetime.datetime' and 'NoneType'
+ERROR 2021-09-13 14:12:22,879 basehttp 133497 139858471274240 "POST /admin/form_produksi/prefilledform/add/?no_kk=4616 HTTP/1.1" 500 136285
+ERROR 2021-09-13 14:13:00,899 log 133497 139858471274240 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+ERROR 2021-09-13 14:13:00,900 basehttp 133497 139858471274240 "POST /admin/form_produksi/prefilledform/add/?no_kk=4616 HTTP/1.1" 500 136259
+ERROR 2021-09-13 14:13:10,790 log 133497 139858471274240 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'NoneType' and 'NoneType'
+ERROR 2021-09-13 14:13:10,793 basehttp 133497 139858471274240 "POST /admin/form_produksi/prefilledform/add/?no_kk=4616 HTTP/1.1" 500 136396
+ERROR 2021-09-13 14:15:12,961 log 133497 139858488059648 Internal Server Error: /admin/form_produksi/reportshiftperkk/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'datetime.datetime' and 'NoneType'
+ERROR 2021-09-13 14:15:12,971 basehttp 133497 139858488059648 "POST /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 500 135762
+ERROR 2021-09-13 14:15:22,560 log 133497 139858488059648 Internal Server Error: /admin/form_produksi/reportshiftperkk/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'datetime.datetime' and 'NoneType'
+ERROR 2021-09-13 14:15:22,561 basehttp 133497 139858488059648 "POST /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 500 135899
+ERROR 2021-09-13 14:17:13,283 log 133497 139858068621056 Internal Server Error: /admin/form_produksi/reportshiftperkk/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'datetime.datetime' and 'NoneType'
+ERROR 2021-09-13 14:17:13,292 basehttp 133497 139858068621056 "POST /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 500 135762
+ERROR 2021-09-13 14:25:10,521 log 133497 139858999228160 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1573, in _changeform_view
+    form_validated = form.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 579, in clean
+    if self.start_time > self.end_time :
+TypeError: '>' not supported between instances of 'datetime.datetime' and 'NoneType'
+ERROR 2021-09-13 14:25:10,522 basehttp 133497 139858999228160 "POST /admin/form_produksi/prefilledform/add/?no_kk=4616 HTTP/1.1" 500 136285
+ERROR 2021-09-13 14:46:10,011 basehttp 133497 139858068621056 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=2 HTTP/1.1" 500 59
+ERROR 2021-09-13 15:58:38,325 basehttp 133497 139858077013760 You're accessing the development server over HTTPS, but it only supports HTTP.
+

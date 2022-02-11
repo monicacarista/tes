@@ -1,0 +1,44 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block content_title %}
+<h1> Report Produksi Per Grup Produk </h1>
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  <table id="result_list" class="display cell-border compact">
+    <thead class="alert-success">
+      <tr>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in summary %}
+      <tr class="{% cycle 'row1' 'row2' %}">
+        {% for data in row %}
+        <td class="table_number">{{ data | intcomma }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="table_compact"><strong> Total </strong> </th>
+        {% for data in summary_total%}
+        <th class="table_number"> <strong>{{ data | intcomma }}</strong></th>
+        {% endfor %}
+      </tr>
+    </tfoot>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,469 @@
+ERROR 2021-10-01 14:50:42,853 log 517798 140035144263424 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 218, in clean
+    durasi_dt = calc_duration(self.waktu_mulai, self.waktu_selesai)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 604, in calc_duration
+    akhir = datetime.combine(dummy, selesai)
+TypeError: combine() argument 2 must be datetime.time, not None
+ERROR 2021-10-01 14:50:42,873 basehttp 517798 140035144263424 "POST /admin/form_produksi/prefilledform/add/?no_kk=5032 HTTP/1.1" 500 165282
+ERROR 2021-10-01 14:55:48,764 log 517798 140035152656128 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 218, in clean
+    durasi_dt = calc_duration(self.waktu_mulai, self.waktu_selesai)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 603, in calc_duration
+    awal = datetime.combine(dummy, mulai)
+TypeError: combine() argument 2 must be datetime.time, not None
+ERROR 2021-10-01 14:55:48,765 basehttp 517798 140035152656128 "POST /admin/form_produksi/prefilledform/add/?no_kk=5032 HTTP/1.1" 500 165214
+ERROR 2021-10-01 15:49:08,641 log 518626 140439471404800 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2049, in changelist_view
+    td[tanggal_idx.get(i['period'])][1] = round(i['uptime'], 2)
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 15:49:08,643 basehttp 518626 140439471404800 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 88196
+ERROR 2021-10-01 15:53:59,614 log 518835 140028308342528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2049, in changelist_view
+    td[tanggal_idx.get(i['period'])][1] = round(i['uptime'], 2)
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 15:53:59,617 basehttp 518835 140028308342528 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 88413
+ERROR 2021-10-01 15:59:07,445 log 518902 140037651691264 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2050, in changelist_view
+    d["period"] = self.format_time(d, period)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2092, in format_time
+    return data["period"].strftime("%Y")
+AttributeError: 'str' object has no attribute 'strftime'
+ERROR 2021-10-01 15:59:07,448 basehttp 518902 140037651691264 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 92612
+ERROR 2021-10-01 16:00:03,092 log 518924 140024234870528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2050, in changelist_view
+    td[tanggal_idx.get(i['period'])][1] = round(i['uptime'], 2)
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 16:00:03,097 basehttp 518924 140024234870528 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 88397
+ERROR 2021-10-01 16:01:55,214 log 518924 140024234870528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2050, in changelist_view
+    for i in eff_time:
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 16:01:55,215 basehttp 518924 140024234870528 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 88332
+ERROR 2021-10-01 16:02:05,184 log 518988 140611726341888 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2051, in changelist_view
+    td[tanggal_idx.get(i['period'])][1] = round(i['uptime'], 2)
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 16:02:05,187 basehttp 518988 140611726341888 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 87530
+ERROR 2021-10-01 16:23:23,402 log 519270 140508636559104 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2020, in changelist_view
+    tanggal_list = [i["period"] for i in summary_data.order].sort()
+AttributeError: 'list' object has no attribute 'order'
+ERROR 2021-10-01 16:23:23,407 basehttp 519270 140508636559104 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90421
+ERROR 2021-10-01 16:23:44,300 log 519298 140221512566528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2020, in changelist_view
+    tanggal_list = [i["period"] for i in summary_data.order]
+AttributeError: 'list' object has no attribute 'order'
+ERROR 2021-10-01 16:23:44,303 basehttp 519298 140221512566528 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90554
+ERROR 2021-10-01 16:23:48,447 log 519298 140221512566528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2020, in changelist_view
+    tanggal_list = [i["period"] for i in summary_data.order]
+AttributeError: 'list' object has no attribute 'order'
+ERROR 2021-10-01 16:23:48,447 basehttp 519298 140221512566528 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90544
+ERROR 2021-10-01 16:24:01,975 log 519298 140221512566528 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2020, in changelist_view
+    tanggal_list = [i["period"] for i in summary_data].sort()
+AttributeError: 'list' object has no attribute 'order'
+ERROR 2021-10-01 16:24:01,978 basehttp 519298 140221512566528 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90546
+ERROR 2021-10-01 16:24:04,431 log 519313 140340285609728 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2021, in changelist_view
+    tanggal_list = list(set(tanggal_list)).sort()
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:04,434 basehttp 519313 140340285609728 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90649
+ERROR 2021-10-01 16:24:06,158 log 519313 140340285609728 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2021, in changelist_view
+    tanggal_list = list(set(tanggal_list)).sort()
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:06,159 basehttp 519313 140340285609728 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90639
+ERROR 2021-10-01 16:24:11,505 log 519313 140340285609728 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2021, in changelist_view
+    tanggal_list = list(set(tanggal_list)).sort()
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:11,505 basehttp 519313 140340285609728 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 90649
+ERROR 2021-10-01 16:24:14,821 log 519325 140136864020224 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2030, in changelist_view
+    tanggal_idx = enumerate(tanggal_list)
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:14,824 basehttp 519325 140136864020224 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 92554
+ERROR 2021-10-01 16:24:16,196 log 519325 140136945313536 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2030, in changelist_view
+    tanggal_idx = enumerate(tanggal_list)
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:16,197 basehttp 519325 140136945313536 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 92554
+ERROR 2021-10-01 16:24:18,331 log 519325 140136945313536 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2030, in changelist_view
+    tanggal_idx = enumerate(tanggal_list)
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:18,332 basehttp 519325 140136945313536 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__year=2021 HTTP/1.1" 500 92544
+ERROR 2021-10-01 16:24:36,988 log 519325 140136945313536 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2030, in changelist_view
+    tanggal_idx = enumerate(tanggal_list)
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:36,989 basehttp 519325 140136945313536 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 86154
+ERROR 2021-10-01 16:24:58,895 log 519325 140136945313536 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2030, in changelist_view
+    tanggal_idx = enumerate(tanggal_list)
+TypeError: 'NoneType' object is not iterable
+ERROR 2021-10-01 16:24:58,898 basehttp 519325 140136945313536 "GET /admin/form_produksi/reportdowntimeperwaktu/ HTTP/1.1" 500 86291
+WARNING 2021-10-01 16:41:07,815 basehttp 519355 140393191556864 "  /*à     Cookie: mstshash=Administr" 400 -
+ERROR 2021-10-01 16:48:45,786 log 519862 139937617803008 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2018, in changelist_view
+    tanggal_list = [i["period"] for i in summary_data.order_by(period)]
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1134, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1919, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'day' into field. Choices are: byproduct, catatan, created_at, detaildowntime, detailmaterialconsumption, detailpackagingusage, detailproductionresults, dl_avail, downtime, downtime, earn_hour, effective_hour, end_time, fg, fg_lm, fg_m2, fg_mass_std, fg_qty, foreman, foreman_id, group_barang, group_barang_id, hold, id, machine, machine_id, no_kk, no_kk_id, normalized_date, operator, operator_id, output_std, period, planned_down_hour, raw_material, reject, reject_eqv, scrap_hasil, scrap_usage, shift, start_time, tipe_barang, tipe_barang_id, total_hour, total_output, trimming, user_group, user_group_id, waste
+ERROR 2021-10-01 16:48:45,804 basehttp 519862 139937617803008 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__month=9&normalized_date__year=2021 HTTP/1.1" 500 111269
+ERROR 2021-10-01 16:49:11,497 log 519878 140048543418112 Internal Server Error: /admin/form_produksi/reportdowntimeperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2058, in changelist_view
+    td[tanggal_idx.get(i['period'])][1] = round(i['uptime'], 2)
+TypeError: list indices must be integers or slices, not NoneType
+ERROR 2021-10-01 16:49:11,500 basehttp 519878 140048543418112 "GET /admin/form_produksi/reportdowntimeperwaktu/?normalized_date__month=9&normalized_date__year=2021 HTTP/1.1" 500 100302

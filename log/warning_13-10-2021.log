@@ -1,0 +1,69 @@
+ERROR 2021-10-13 12:26:39,836 basehttp 733777 140439364146944 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=5 HTTP/1.1" 500 59
+ERROR 2021-10-13 12:26:43,931 basehttp 733777 140439336609536 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=5 HTTP/1.1" 500 59
+ERROR 2021-10-13 12:27:20,795 basehttp 733777 140438962947840 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=5 HTTP/1.1" 500 59
+ERROR 2021-10-13 12:32:40,284 basehttp 733777 140438971340544 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=6 HTTP/1.1" 500 59
+ERROR 2021-10-13 12:32:52,571 basehttp 733777 140438944593664 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=6 HTTP/1.1" 500 59
+ERROR 2021-10-13 12:33:45,819 basehttp 733777 140438988125952 "GET /admin/form_produksi/reportbykk/?all=&creation_date__year=2021&user_group__id__exact=6 HTTP/1.1" 500 59
+ERROR 2021-10-13 14:11:07,410 basehttp 733777 140438988125952 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-13 14:37:30,362 exception 733777 140438687962880 Invalid HTTP_HOST header: 'localhost.localdomain:8000'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+WARNING 2021-10-13 14:37:30,423 log 733777 140438687962880 Bad Request: /
+WARNING 2021-10-13 14:37:30,423 basehttp 733777 140438687962880 "GET / HTTP/1.0" 400 63071
+ERROR 2021-10-13 14:37:33,135 basehttp 733777 140439336613632 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-13 14:37:33,886 basehttp 733777 140439336613632 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2021-10-13 14:37:36,658 log 733777 140438687962880 Not Found: /robots.txt
+WARNING 2021-10-13 14:37:36,658 basehttp 733777 140438687962880 "GET /robots.txt HTTP/1.1" 404 2184
+WARNING 2021-10-13 14:37:37,805 log 733777 140438988125952 Not Found: /.well-known/security.txt
+WARNING 2021-10-13 14:37:37,806 basehttp 733777 140438988125952 "GET /.well-known/security.txt HTTP/1.1" 404 2226
+ERROR 2021-10-13 16:05:58,009 log 733777 140438988125952 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 219, in clean
+    durasi_dt = calc_duration(self.waktu_mulai, self.waktu_selesai)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 604, in calc_duration
+    akhir = datetime.combine(dummy, selesai)
+TypeError: combine() argument 2 must be datetime.time, not None
+ERROR 2021-10-13 16:05:59,659 basehttp 733777 140438988125952 "POST /admin/form_produksi/productionform/add/?_changelist_filters=normalized_date__month%3D10%26normalized_date__year%3D2021 HTTP/1.1" 500 167565

@@ -1,0 +1,495 @@
+ERROR 2021-10-19 09:41:53,359 log 70387 140561950050048 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1687, in get_prep_value
+    return float(value)
+TypeError: float() argument must be a string or a number, not 'tuple'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1581, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1121, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1109, in save_formset
+    formset.save()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 156, in save
+    instance = self.get_saved_instance_for_form(form, commit, form_instances)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 241, in get_saved_instance_for_form
+    instances = self.save_new_objects([form], commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 382, in save_new_objects
+    new_objects.append(self.save_new(form, commit=commit))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 951, in save_new
+    return super().save_new(form, commit=commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 650, in save_new
+    return form.save(commit=commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 460, in save
+    self.instance.save()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 173, in save
+    super(DetailProductionResults, self).save(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 754, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 792, in save_base
+    force_update, using, update_fields,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 935, in _do_insert
+    using=using, raw=raw,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1341, in as_sql
+    for obj in self.query.objs
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1341, in <listcomp>
+    for obj in self.query.objs
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1340, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1281, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 823, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 818, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1691, in get_prep_value
+    ) from e
+TypeError: Field 'fg_mass' expected a number but got (1718.4, 2).
+ERROR 2021-10-19 09:41:53,397 basehttp 70387 140561950050048 "POST /admin/form_produksi/productionform/add/ HTTP/1.1" 500 233535
+ERROR 2021-10-19 09:42:45,344 log 70387 140561696667392 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1687, in get_prep_value
+    return float(value)
+TypeError: float() argument must be a string or a number, not 'tuple'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1581, in _changeform_view
+    self.save_related(request, form, formsets, not add)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1121, in save_related
+    self.save_formset(request, form, formset, change=change)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1109, in save_formset
+    formset.save()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 156, in save
+    instance = self.get_saved_instance_for_form(form, commit, form_instances)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 241, in get_saved_instance_for_form
+    instances = self.save_new_objects([form], commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/formsets.py", line 382, in save_new_objects
+    new_objects.append(self.save_new(form, commit=commit))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 951, in save_new
+    return super().save_new(form, commit=commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 650, in save_new
+    return form.save(commit=commit)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 460, in save
+    self.instance.save()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 173, in save
+    super(DetailProductionResults, self).save(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 754, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 792, in save_base
+    force_update, using, update_fields,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 935, in _do_insert
+    using=using, raw=raw,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1396, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1341, in as_sql
+    for obj in self.query.objs
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1341, in <listcomp>
+    for obj in self.query.objs
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1340, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1281, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 823, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 818, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1691, in get_prep_value
+    ) from e
+TypeError: Field 'fg_mass' expected a number but got (0.0, 2).
+ERROR 2021-10-19 09:42:45,405 basehttp 70387 140561696667392 "POST /admin/form_produksi/productionform/add/ HTTP/1.1" 500 233505
+WARNING 2021-10-19 11:40:21,925 basehttp 70826 140519501977344 "   TZ          0I     ¨ÀpÂ{                                                 " 400 -
+ERROR 2021-10-19 11:57:02,439 log 70826 140520038848256 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/10/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:57:02,442 basehttp 70826 140520038848256 "GET /admin/form_produksi/reportdowntimepermesin/10/change/?normalized_date__year=2021&user_group__id__exact=1&normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021 HTTP/1.1" 500 133185
+ERROR 2021-10-19 11:57:35,586 log 70826 140519501977344 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/10/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:57:35,587 basehttp 70826 140519501977344 "GET /admin/form_produksi/reportdowntimepermesin/10/change/?normalized_date__year=2021&user_group__id__exact=1&normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021 HTTP/1.1" 500 133185
+ERROR 2021-10-19 11:57:41,567 log 70826 140520038848256 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/62/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:57:41,568 basehttp 70826 140520038848256 "GET /admin/form_produksi/reportdowntimepermesin/62/change/?normalized_date__year=2021&user_group__id__exact=1&normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021 HTTP/1.1" 500 133184
+ERROR 2021-10-19 11:58:03,968 log 70826 140519501977344 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/2/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:58:03,969 basehttp 70826 140519501977344 "GET /admin/form_produksi/reportdowntimepermesin/2/change/?normalized_date__year=2021&user_group__id__exact=1&normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021 HTTP/1.1" 500 133364
+ERROR 2021-10-19 11:58:47,709 log 70826 140519501977344 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/2/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:58:47,710 basehttp 70826 140519501977344 "GET /admin/form_produksi/reportdowntimepermesin/2/change/?normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021&normalized_date__year=2021&produk_id=10&user_group__id__exact=1 HTTP/1.1" 500 134490
+ERROR 2021-10-19 11:59:03,737 log 70826 140520038848256 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/2/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1935, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-19 11:59:03,738 basehttp 70826 140520038848256 "GET /admin/form_produksi/reportdowntimepermesin/2/change/?normalized_date__range__gte=&normalized_date__range__lte=18%2F10%2F2021&normalized_date__year=2021&produk_id=10&user_group__id__exact=1 HTTP/1.1" 500 134490
+ERROR 2021-10-19 12:57:26,951 exception 73025 140476121286400 Invalid HTTP_HOST header: 'check.best-proxies.ru:80'. You may need to add 'check.best-proxies.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-19 12:57:27,012 log 73025 140476121286400 Bad Request: /5.178.86.76:80
+WARNING 2021-10-19 12:57:27,376 basehttp 73025 140476121286400 "CONNECT 5.178.86.76:80 HTTP/1.1" 400 63373
+WARNING 2021-10-19 12:57:31,550 basehttp 73025 140476112107264 " P²VL0 " 400 -
+ERROR 2021-10-19 12:57:31,966 exception 73025 140476112107264 Invalid HTTP_HOST header: 'check.best-proxies.ru'. You may need to add 'check.best-proxies.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-19 12:57:32,025 log 73025 140476112107264 Bad Request: /http:/check.best-proxies.ru/ip.php
+WARNING 2021-10-19 12:57:32,401 basehttp 73025 140476112107264 "POST http://check.best-proxies.ru/ip.php?Z76675610160Q1 HTTP/1.1" 400 65220
+WARNING 2021-10-19 12:57:36,566 basehttp 73025 140476121286400 " " 400 -
+ERROR 2021-10-19 13:29:34,325 log 73552 140126075389696 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2307, in changelist_view
+    td[i['y'][1]] = sum(val for val in td[i['y']] if isinstance(val, numbers.Number))
+TypeError: 'int' object is not subscriptable
+ERROR 2021-10-19 13:29:34,328 basehttp 73552 140126075389696 "GET /admin/form_produksi/reportrawmaterialperkk/ HTTP/1.1" 500 111627
+ERROR 2021-10-19 13:34:05,141 log 73629 139834068825856 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2307, in changelist_view
+    a = sum(zip(*data))
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+ERROR 2021-10-19 13:34:05,144 basehttp 73629 139834068825856 "GET /admin/form_produksi/reportrawmaterialperkk/?creation_date__month=9&creation_date__year=2021&user_group__id__exact=2 HTTP/1.1" 500 111825
+ERROR 2021-10-19 13:34:24,610 log 73636 140279567202048 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2307, in changelist_view
+    a = sum(zip(*td))
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+ERROR 2021-10-19 13:34:24,613 basehttp 73636 140279567202048 "GET /admin/form_produksi/reportrawmaterialperkk/?creation_date__month=9&creation_date__year=2021&user_group__id__exact=2 HTTP/1.1" 500 111821
+ERROR 2021-10-19 13:35:55,217 log 73682 139878459234048 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2307, in changelist_view
+    a = sum(val for val in zip(*td) if isinstance(val, numbers.Number))
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2307, in <genexpr>
+    a = sum(val for val in zip(*td) if isinstance(val, numbers.Number))
+NameError: name 'numbers' is not defined
+ERROR 2021-10-19 13:35:55,221 basehttp 73682 139878459234048 "GET /admin/form_produksi/reportrawmaterialperkk/?creation_date__month=9&creation_date__year=2021&user_group__id__exact=2 HTTP/1.1" 500 117555
+ERROR 2021-10-19 13:37:39,977 log 73724 140034763495168 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2309, in changelist_view
+    for i, number in enumerate(subtotal):
+TypeError: 'int' object is not iterable
+ERROR 2021-10-19 13:37:39,980 basehttp 73724 140034763495168 "GET /admin/form_produksi/reportrawmaterialperkk/?creation_date__month=9&creation_date__year=2021&user_group__id__exact=2 HTTP/1.1" 500 111966
+WARNING 2021-10-19 13:44:41,994 log 73789 140599610554112 Not Found: /admin/form_produksi/reportproductionresults/1838/change/
+WARNING 2021-10-19 13:44:41,994 basehttp 73789 140599610554112 "GET /admin/form_produksi/reportproductionresults/1838/change/?_changelist_filters=p%3D9 HTTP/1.1" 404 8807
+ERROR 2021-10-19 14:53:57,363 basehttp 73880 139943914759936 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-19 16:59:26,822 log 76978 140079217506048 Internal Server Error: /admin/form_produksi/reportrawmaterialperkk/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2328, in changelist_view
+    td[i][1] = sum(val for val in td_row if isinstance(val, numbers.Number))
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2328, in <genexpr>
+    td[i][1] = sum(val for val in td_row if isinstance(val, numbers.Number))
+NameError: name 'numbers' is not defined
+ERROR 2021-10-19 16:59:26,825 basehttp 76978 140079217506048 "GET /admin/form_produksi/reportrawmaterialperkk/ HTTP/1.1" 500 114192
+ERROR 2021-10-19 17:13:26,048 exception 77161 140248600278784 Invalid HTTP_HOST header: 'proxy.kagda.ru:80'. You may need to add 'proxy.kagda.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-19 17:13:26,109 log 77161 140248600278784 Bad Request: /91.214.48.87:80
+WARNING 2021-10-19 17:13:26,739 basehttp 77161 140248600278784 "CONNECT 91.214.48.87:80 HTTP/1.1" 400 63279
+WARNING 2021-10-19 17:13:30,647 basehttp 77161 140248679020288 " P[Ö0W0 " 400 -
+ERROR 2021-10-19 17:13:31,067 exception 77161 140248600278784 Invalid HTTP_HOST header: 'proxy.kagda.ru'. You may need to add 'proxy.kagda.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-19 17:13:31,128 log 77161 140248600278784 Bad Request: /http:/proxy.kagda.ru/myip2.php
+WARNING 2021-10-19 17:13:31,501 basehttp 77161 140248600278784 "POST http://proxy.kagda.ru/myip2.php?Z76675610160Q1 HTTP/1.1" 400 65071
+WARNING 2021-10-19 17:13:35,663 basehttp 77161 140248679020288 " " 400 -

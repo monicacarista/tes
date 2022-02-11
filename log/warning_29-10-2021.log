@@ -1,0 +1,180 @@
+ERROR 2021-10-29 10:10:10,931 log 411743 139902059570944 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1544, in changelist_view
+    d["idle_time"] = total_time[d["period"]] - d["downtime"] - d["effective_time"]
+KeyError: 'period'
+ERROR 2021-10-29 10:10:10,935 basehttp 411743 139902059570944 "GET /admin/form_produksi/reportperwaktu/?normalized_date__day=1&normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 93231
+ERROR 2021-10-29 10:11:03,452 log 411743 139902059570944 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1544, in changelist_view
+KeyError: 'period'
+ERROR 2021-10-29 10:11:03,454 basehttp 411743 139902059570944 "GET /admin/form_produksi/reportperwaktu/?normalized_date__day=1&normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 93004
+ERROR 2021-10-29 10:11:05,636 log 411782 140063733192448 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1564, in changelist_view
+    summary_total["idle_time"] = sum([data["idle_time"] for data in summary_data])
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1564, in <listcomp>
+    summary_total["idle_time"] = sum([data["idle_time"] for data in summary_data])
+KeyError: 'idle_time'
+ERROR 2021-10-29 10:11:05,639 basehttp 411782 140063733192448 "GET /admin/form_produksi/reportperwaktu/?normalized_date__day=1&normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 99645
+ERROR 2021-10-29 10:11:06,655 log 411782 140063733192448 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1564, in changelist_view
+    summary_total["idle_time"] = sum([data["idle_time"] for data in summary_data])
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1564, in <listcomp>
+    summary_total["idle_time"] = sum([data["idle_time"] for data in summary_data])
+KeyError: 'idle_time'
+ERROR 2021-10-29 10:11:06,655 basehttp 411782 140063733192448 "GET /admin/form_produksi/reportperwaktu/?normalized_date__day=1&normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 99645
+ERROR 2021-10-29 10:26:04,238 log 411811 139659216664320 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1534, in changelist_view
+    total_time = get_total_time_time_row(summary_data, period, self.date_hierarchy, is_machine_query)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1683, in get_total_time_time_row
+    total_hour += np.busday_count(first, last, j['week_mask']) * j['daily_hour'] * j['machine_count']
+UnboundLocalError: local variable 'first' referenced before assignment
+ERROR 2021-10-29 10:26:04,264 basehttp 411811 139659216664320 "GET /admin/form_produksi/reportperwaktu/?normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 106119
+ERROR 2021-10-29 10:26:16,673 log 411811 139659225057024 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1534, in changelist_view
+    total_time = get_total_time_time_row(summary_data, period, self.date_hierarchy, is_machine_query)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1683, in get_total_time_time_row
+    total_hour += np.busday_count(first, last, j['week_mask']) * j['daily_hour'] * j['machine_count']
+UnboundLocalError: local variable 'first' referenced before assignment
+ERROR 2021-10-29 10:26:16,757 basehttp 411811 139659225057024 "GET /admin/form_produksi/reportperwaktu/?normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 106120
+ERROR 2021-10-29 10:27:40,528 log 411811 139659225057024 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1534, in changelist_view
+    total_time = get_total_time_time_row(summary_data, period, self.date_hierarchy, is_machine_query)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1683, in get_total_time_time_row
+    total_hour += np.busday_count(first, last, j['week_mask']) * j['daily_hour'] * j['machine_count']
+UnboundLocalError: local variable 'first' referenced before assignment
+ERROR 2021-10-29 10:27:40,529 basehttp 411811 139659225057024 "GET /admin/form_produksi/reportperwaktu/?normalized_date__month=10&normalized_date__year=2021&user_group__id__exact=4 HTTP/1.1" 500 105938
+ERROR 2021-10-29 10:49:46,898 basehttp 411811 139658839189248 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 500 59
+ERROR 2021-10-29 11:10:54,600 log 411811 139659767682816 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1534, in changelist_view
+    total_time = get_total_time_time_row(summary_data, period, self.date_hierarchy, is_machine_query)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1683, in get_total_time_time_row
+    total_hour += np.busday_count(first, last, j['week_mask']) * j['daily_hour'] * j['machine_count']
+UnboundLocalError: local variable 'first' referenced before assignment
+ERROR 2021-10-29 11:10:54,601 basehttp 411811 139659767682816 "GET /admin/form_produksi/reportperwaktu/?normalized_date__month=9&normalized_date__year=2021&user_group__id__exact=1 HTTP/1.1" 500 105919
+ERROR 2021-10-29 11:10:57,195 log 411811 139659767682816 Internal Server Error: /admin/form_produksi/reportperwaktu/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1534, in changelist_view
+    total_time = get_total_time_time_row(summary_data, period, self.date_hierarchy, is_machine_query)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1683, in get_total_time_time_row
+    total_hour += np.busday_count(first, last, j['week_mask']) * j['daily_hour'] * j['machine_count']
+UnboundLocalError: local variable 'first' referenced before assignment
+ERROR 2021-10-29 11:10:57,196 basehttp 411811 139659767682816 "GET /admin/form_produksi/reportperwaktu/?normalized_date__month=9&normalized_date__year=2021&user_group__id__exact=4 HTTP/1.1" 500 105664
+ERROR 2021-10-29 12:27:43,871 basehttp 413439 140669953046272 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-29 15:44:29,815 basehttp 420871 140651377047296 You're accessing the development server over HTTPS, but it only supports HTTP.
+

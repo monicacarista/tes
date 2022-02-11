@@ -1,0 +1,67 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block content_title %}
+<h1> Report Berdasarkan Unit {{selected_machine}}</h1>
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  <table id="result_list" class="display cell-border compact">
+    <thead class="alert-success">
+      <tr>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in summary %}
+      <tr>
+        <td class="table_compact"> {{ row.unit }} </td>
+        <td class="table_number"> {{ row.raw_material | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.finished_goods | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.fg_theory | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.fg_qty | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.fg_lm | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.fg_m2 | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.fty | to_percent:2 }} </td>
+        <td class="table_number"> {{ row.availibility | to_percent:2 }} </td>
+        <td class="table_number"> {{ row.performance | to_percent:2 }} </td>
+        <td class="table_number"> {{ row.oee | to_percent:2 }} </td>
+        <td class="table_number"> {{ row.scrap_dipakai | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.scrap_dihasilkan | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.scrap_selisih | floatformat:2 | intcomma }} </td>
+        <td class="table_number"> {{ row.waste | floatformat:2 | intcomma }} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="table_compact"><strong> Total </strong> </th>
+        <th class="table_number"> <strong>{{ summary_total.raw_material | floatformat:2 | intcomma }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.finished_goods | floatformat:2 | intcomma }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.fg_theory | floatformat:2 | intcomma }} </strong> </th>
+        <th class="table_number"> <strong>{{ summary_total.fg_qty | floatformat:2 | intcomma }} </strong> </th>
+        <th class="table_number"> <strong>{{ summary_total.fg_lm | floatformat:2 | intcomma }} </strong> </th>
+        <th class="table_number"> <strong>{{ summary_total.fg_m2 | floatformat:2 | intcomma }} </strong> </th>
+        <th class="table_number"> <strong>{{ summary_total.fty | to_percent:2 }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.availibility | to_percent:2 }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.performance | to_percent:2 }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.oee | to_percent:2 }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.scrap_dipakai | floatformat:2 | intcomma }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.scrap_dihasilkan | floatformat:2 | intcomma }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.scrap_selisih | floatformat:2 | intcomma }} </strong></th>
+        <th class="table_number"> <strong>{{ summary_total.waste | floatformat:2 | intcomma }} </strong> </th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+{% endblock %}

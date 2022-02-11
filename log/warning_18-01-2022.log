@@ -1,0 +1,20 @@
+WARNING 2022-01-18 10:40:36,862 log 6814 139688767104768 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-18 10:40:36,863 basehttp 6814 139688767104768 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-18 10:40:58,628 log 6814 139688739567360 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-18 10:40:58,629 basehttp 6814 139688739567360 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-18 13:57:10,186 log 6814 139686764869376 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-18 13:57:10,186 basehttp 6814 139686764869376 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+WARNING 2022-01-18 14:34:08,186 log 6814 139687687608064 Not Found: /admin/form_produksi/reportshiftperkk/add/
+WARNING 2022-01-18 14:34:08,187 basehttp 6814 139687687608064 "GET /admin/form_produksi/reportshiftperkk/add/ HTTP/1.1" 404 9692
+ERROR 2022-01-18 17:36:06,645 log 28272 140423460800256 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/middleware/common.py", line 94, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 36.94.100.6:8000/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2022-01-18 17:36:06,646 basehttp 28272 140423460800256 "POST /admin HTTP/1.1" 500 64969

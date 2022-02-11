@@ -1,0 +1,263 @@
+ERROR 2021-09-27 10:35:37,752 log 427737 140215767258880 Internal Server Error: /admin/form_produksi/productionform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 336, in full_clean
+    form_errors = form.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 172, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/forms.py", line 376, in full_clean
+    self._post_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 405, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/base.py", line 1216, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 217, in clean
+    durasi_dt = self.laporan.downtime + calc_duration(self.waktu_mulai, self.waktu_selesai)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 603, in calc_duration
+    awal = datetime.combine(dummy, mulai)
+TypeError: combine() argument 2 must be datetime.time, not None
+ERROR 2021-09-27 10:35:37,774 basehttp 427737 140215767258880 "POST /admin/form_produksi/productionform/add/ HTTP/1.1" 500 166046
+ERROR 2021-09-27 11:17:58,037 log 429170 139900873123584 Internal Server Error: /admin/form_produksi/productionform/16363/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 356, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 632, in clean
+    if total > self.laporan.total_hour:
+AttributeError: 'DetailDowntimeFormFormSet' object has no attribute 'laporan'
+ERROR 2021-09-27 11:17:58,797 basehttp 429170 139900873123584 "POST /admin/form_produksi/productionform/16363/change/ HTTP/1.1" 500 144363
+ERROR 2021-09-27 11:18:08,094 log 429170 139900496111360 Internal Server Error: /admin/form_produksi/productionform/15025/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 356, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 632, in clean
+    if total > self.laporan.total_hour:
+AttributeError: 'DetailDowntimeFormFormSet' object has no attribute 'laporan'
+ERROR 2021-09-27 11:18:08,126 basehttp 429170 139900496111360 "POST /admin/form_produksi/productionform/15025/change/ HTTP/1.1" 500 143850
+ERROR 2021-09-27 11:18:16,593 log 429170 139900478277376 Internal Server Error: /admin/form_produksi/productionform/15025/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 356, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 632, in clean
+    if total > self.laporan.total_hour:
+AttributeError: 'DetailDowntimeFormFormSet' object has no attribute 'laporan'
+ERROR 2021-09-27 11:18:16,625 basehttp 429170 139900478277376 "POST /admin/form_produksi/productionform/15025/change/ HTTP/1.1" 500 143850
+ERROR 2021-09-27 11:18:21,767 log 429170 139900478277376 Internal Server Error: /admin/form_produksi/productionform/15025/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 356, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 632, in clean
+    if total > self.laporan.total_hour:
+AttributeError: 'DetailDowntimeFormFormSet' object has no attribute 'laporan'
+ERROR 2021-09-27 11:18:21,788 basehttp 429170 139900478277376 "POST /admin/form_produksi/productionform/15025/change/ HTTP/1.1" 500 143850
+ERROR 2021-09-27 11:18:28,674 log 429170 139900496111360 Internal Server Error: /admin/form_produksi/productionform/15025/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1579, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "/home/Vieri/.local/lib/python3.6/site-packages/monkeybiz/__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/__init__.py", line 134, in all_valid
+    if not original_all_valid(formsets):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 464, in all_valid
+    valid &= formset.is_valid()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 308, in is_valid
+    self.errors
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 288, in errors
+    self.full_clean()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/formsets.py", line 356, in full_clean
+    self.clean()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 632, in clean
+    if total > self.laporan.total_hour:
+AttributeError: 'DetailDowntimeFormFormSet' object has no attribute 'laporan'
+ERROR 2021-09-27 11:18:28,706 basehttp 429170 139900496111360 "POST /admin/form_produksi/productionform/15025/change/ HTTP/1.1" 500 143848
+ERROR 2021-09-27 11:32:50,808 exception 429218 139886566156032 Invalid HTTP_HOST header: 'check.best-proxies.ru:80'. You may need to add 'check.best-proxies.ru' to ALLOWED_HOSTS.
+WARNING 2021-09-27 11:32:50,914 log 429218 139886566156032 Bad Request: /5.178.86.76:80
+WARNING 2021-09-27 11:32:51,233 basehttp 429218 139886566156032 "CONNECT 5.178.86.76:80 HTTP/1.1" 400 63373
+WARNING 2021-09-27 11:33:00,418 basehttp 429218 139886566156032 " P²VL0 " 400 -
+ERROR 2021-09-27 11:33:00,839 exception 429218 139886566156032 Invalid HTTP_HOST header: 'check.best-proxies.ru'. You may need to add 'check.best-proxies.ru' to ALLOWED_HOSTS.
+WARNING 2021-09-27 11:33:00,899 log 429218 139886566156032 Bad Request: /http:/check.best-proxies.ru/ip.php
+WARNING 2021-09-27 11:33:01,261 basehttp 429218 139886566156032 "POST http://check.best-proxies.ru/ip.php?Z76675610160Q1 HTTP/1.1" 400 65220
+WARNING 2021-09-27 11:33:05,438 basehttp 429218 139886304667392 " " 400 -
+ERROR 2021-09-27 12:15:13,565 basehttp 430086 140443476027136 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2021-09-27 14:07:52,461 log 430086 140443467634432 Not Found: /NON_EXISTING_PATH/
+WARNING 2021-09-27 14:07:52,462 basehttp 430086 140443467634432 "GET /NON_EXISTING_PATH/ HTTP/1.1" 404 2208
+WARNING 2021-09-27 15:27:34,048 basehttp 430086 140442444216064 "  /*à     Cookie: mstshash=Administr" 400 -

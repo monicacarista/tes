@@ -1,0 +1,481 @@
+.
+├── dir
+├── form_produksi
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── list_disp_methods.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_reportshiftperkk_dl_avail.py
+│   │   ├── 0003_auto_20210308_1543.py
+│   │   ├── 0004_auto_20210308_1551.py
+│   │   ├── 0005_auto_20210308_1555.py
+│   │   ├── 0006_auto_20210308_1611.py
+│   │   ├── 0007_auto_20210308_1613.py
+│   │   ├── 0008_auto_20210308_1649.py
+│   │   ├── 0009_auto_20210315_1014.py
+│   │   ├── 0010_reportperhari.py
+│   │   ├── 0011_auto_20210315_1357.py
+│   │   ├── 0012_auto_20210317_1108.py
+│   │   ├── 0013_reportshiftperkk_pemakaian_bahan.py
+│   │   ├── 0014_auto_20210317_1148.py
+│   │   ├── 0015_auto_20210317_1504.py
+│   │   ├── 0016_auto_20210317_1508.py
+│   │   ├── 0017_auto_20210317_1512.py
+│   │   ├── 0018_auto_20210318_1330.py
+│   │   ├── 0019_auto_20210324_0844.py
+│   │   ├── 0020_remove_detailmaterialconsumption_qty_pemakaian.py
+│   │   ├── 0021_auto_20210324_0846.py
+│   │   ├── 0022_auto_20210324_1133.py
+│   │   ├── 0023_auto_20210324_1206.py
+│   │   ├── 0024_auto_20210330_1631.py
+│   │   ├── 0025_auto_20210401_1403.py
+│   │   ├── 0026_auto_20210401_1428.py
+│   │   ├── 0027_auto_20210406_1336.py
+│   │   ├── 0028_kk_is_export.py
+│   │   ├── 0029_auto_20210408_1417.py
+│   │   ├── 0030_detailpackagingreject.py
+│   │   ├── 0031_auto_20210413_0847.py
+│   │   ├── 0032_auto_20210413_1518.py
+│   │   ├── 0033_auto_20210414_0837.py
+│   │   ├── 0034_auto_20210415_1403.py
+│   │   ├── 0035_auto_20210415_1711.py
+│   │   ├── 0036_auto_20210416_0924.py
+│   │   ├── 0037_auto_20210416_1605.py
+│   │   ├── 0038_auto_20210419_1034.py
+│   │   ├── 0039_auto_20210421_1425.py
+│   │   ├── 0040_detailmaterialconsumption_reject_pkg.py
+│   │   ├── 0041_remove_detailmaterialconsumption_reject_pkg.py
+│   │   ├── 0042_reportshiftperkk_fg_qty.py
+│   │   ├── 0043_reportshiftperkk_reject_eqv.py
+│   │   ├── 0044_auto_20210423_0940.py
+│   │   ├── 0045_auto_20210423_1047.py
+│   │   ├── 0046_reportrejectpacakging.py
+│   │   ├── 0047_remove_reportshiftperkk_team.py
+│   │   ├── 0048_auto_20210423_1543.py
+│   │   ├── 0049_auto_20210426_0945.py
+│   │   ├── 0050_reportshiftperkk_planned_down_hour.py
+│   │   ├── 0051_auto_20210426_1120.py
+│   │   ├── 0052_auto_20210426_1120.py
+│   │   ├── 0053_auto_20210426_1136.py
+│   │   ├── 0054_reportshiftperkk_scrap_hasil.py
+│   │   ├── 0055_auto_20210503_1259.py
+│   │   ├── 0056_auto_20210503_1641.py
+│   │   ├── 0057_reportshiftperkk_created_at.py
+│   │   ├── 0058_reportshiftperkk_output_std.py
+│   │   ├── 0059_auto_20210518_0831.py
+│   │   ├── 0060_auto_20210518_0858.py
+│   │   ├── 0061_auto_20210518_0903.py
+│   │   ├── 0062_auto_20210521_0833.py
+│   │   ├── 0063_reportshiftperkk_catatan.py
+│   │   ├── 0064_reportshiftperkk_trial.py
+│   │   ├── 0065_auto_20210524_1040.py
+│   │   ├── 0066_auto_20210524_1409.py
+│   │   ├── 0067_auto_20210525_0849.py
+│   │   ├── 0068_auto_20210525_0859.py
+│   │   ├── 0069_auto_20210525_0907.py
+│   │   ├── 0070_auto_20210531_1107.py
+│   │   ├── 0071_reportrawmaterialperkk.py
+│   │   ├── 0072_reportshiftperkk_cleaning.py
+│   │   ├── 0073_auto_20210615_1522.py
+│   │   ├── 0074_auto_20210615_1604.py
+│   │   ├── 0075_auto_20210615_1611.py
+│   │   ├── 0076_reportperunit.py
+│   │   ├── 0077_reportshiftperkk_tipe_barang.py
+│   │   ├── 0078_auto_20210618_1343.py
+│   │   ├── 0079_auto_20210622_0957.py
+│   │   ├── 0080_auto_20210622_1118.py
+│   │   ├── 0081_auto_20210622_1120.py
+│   │   ├── 0082_auto_20210622_1120.py
+│   │   ├── 0083_auto_20210629_1450.py
+│   │   ├── 0084_detailmaterialconsumption_qty_pakai.py
+│   │   ├── 0085_auto_20210629_1552.py
+│   │   ├── 0086_reportshiftperkk_total_output.py
+│   │   ├── 0087_auto_20210707_0853.py
+│   │   ├── 0088_reportpermesin.py
+│   │   ├── 0089_auto_20210711_2156.py
+│   │   ├── 0090_auto_20210711_2157.py
+│   │   ├── 0091_auto_20210711_2157.py
+│   │   ├── 0092_auto_20210713_1200.py
+│   │   ├── 0093_auto_20210713_1201.py
+│   │   ├── 0094_auto_20210713_1202.py
+│   │   ├── 0095_reportshiftperkk_byproduct.py
+│   │   ├── 0096_auto_20210714_1653.py
+│   │   ├── 0097_auto_20210715_0810.py
+│   │   ├── 0098_reportperproductgroup.py
+│   │   ├── 0099_auto_20210723_1418.py
+│   │   ├── 0100_auto_20210726_1129.py
+│   │   ├── 0101_auto_20210806_1012.py
+│   │   ├── 0102_auto_20210810_1420.py
+│   │   ├── 0103_auto_20210813_1535.py
+│   │   ├── 0104_auto_20210824_0934.py
+│   │   ├── 0105_auto_20210826_1016.py
+│   │   ├── 0106_auto_20210826_1018.py
+│   │   ├── 0107_detailfinishedgoodkk.py
+│   │   ├── 0108_auto_20210826_1525.py
+│   │   ├── 0109_auto_20210826_1554.py
+│   │   ├── 0110_prefilledform.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-36.pyc
+│   │       ├── 0002_reportshiftperkk_dl_avail.cpython-36.pyc
+│   │       ├── 0003_auto_20210308_1543.cpython-36.pyc
+│   │       ├── 0004_auto_20210308_1549.cpython-36.pyc
+│   │       ├── 0004_auto_20210308_1551.cpython-36.pyc
+│   │       ├── 0005_auto_20210308_1554.cpython-36.pyc
+│   │       ├── 0005_auto_20210308_1555.cpython-36.pyc
+│   │       ├── 0006_auto_20210308_1611.cpython-36.pyc
+│   │       ├── 0007_auto_20210308_1613.cpython-36.pyc
+│   │       ├── 0008_auto_20210308_1649.cpython-36.pyc
+│   │       ├── 0009_auto_20210315_1014.cpython-36.pyc
+│   │       ├── 0010_reportperhari.cpython-36.pyc
+│   │       ├── 0011_auto_20210315_1357.cpython-36.pyc
+│   │       ├── 0012_auto_20210317_1108.cpython-36.pyc
+│   │       ├── 0013_reportshiftperkk_pemakaian_bahan.cpython-36.pyc
+│   │       ├── 0014_auto_20210317_1148.cpython-36.pyc
+│   │       ├── 0015_auto_20210317_1504.cpython-36.pyc
+│   │       ├── 0016_auto_20210317_1508.cpython-36.pyc
+│   │       ├── 0017_auto_20210317_1512.cpython-36.pyc
+│   │       ├── 0018_auto_20210318_1330.cpython-36.pyc
+│   │       ├── 0019_auto_20210324_0844.cpython-36.pyc
+│   │       ├── 0020_remove_detailmaterialconsumption_qty_pemakaian.cpython-36.pyc
+│   │       ├── 0021_auto_20210324_0846.cpython-36.pyc
+│   │       ├── 0022_auto_20210324_1133.cpython-36.pyc
+│   │       ├── 0023_auto_20210324_1206.cpython-36.pyc
+│   │       ├── 0024_auto_20210330_1631.cpython-36.pyc
+│   │       ├── 0025_auto_20210401_1403.cpython-36.pyc
+│   │       ├── 0026_auto_20210401_1428.cpython-36.pyc
+│   │       ├── 0027_auto_20210406_1336.cpython-36.pyc
+│   │       ├── 0028_kk_is_export.cpython-36.pyc
+│   │       ├── 0029_auto_20210408_1417.cpython-36.pyc
+│   │       ├── 0030_detailpackagingreject.cpython-36.pyc
+│   │       ├── 0031_auto_20210413_0847.cpython-36.pyc
+│   │       ├── 0032_auto_20210413_1518.cpython-36.pyc
+│   │       ├── 0033_auto_20210414_0837.cpython-36.pyc
+│   │       ├── 0034_auto_20210415_1403.cpython-36.pyc
+│   │       ├── 0035_auto_20210415_1711.cpython-36.pyc
+│   │       ├── 0036_auto_20210416_0924.cpython-36.pyc
+│   │       ├── 0037_auto_20210416_1605.cpython-36.pyc
+│   │       ├── 0038_auto_20210419_1034.cpython-36.pyc
+│   │       ├── 0039_auto_20210421_1425.cpython-36.pyc
+│   │       ├── 0040_detailmaterialconsumption_reject_pkg.cpython-36.pyc
+│   │       ├── 0041_remove_detailmaterialconsumption_reject_pkg.cpython-36.pyc
+│   │       ├── 0042_reportshiftperkk_fg_qty.cpython-36.pyc
+│   │       ├── 0043_reportshiftperkk_reject_eqv.cpython-36.pyc
+│   │       ├── 0044_auto_20210423_0940.cpython-36.pyc
+│   │       ├── 0045_auto_20210423_1047.cpython-36.pyc
+│   │       ├── 0046_reportrejectpacakging.cpython-36.pyc
+│   │       ├── 0047_remove_reportshiftperkk_team.cpython-36.pyc
+│   │       ├── 0048_auto_20210423_1543.cpython-36.pyc
+│   │       ├── 0049_auto_20210426_0945.cpython-36.pyc
+│   │       ├── 0050_reportshiftperkk_planned_down_hour.cpython-36.pyc
+│   │       ├── 0051_auto_20210426_1120.cpython-36.pyc
+│   │       ├── 0052_auto_20210426_1120.cpython-36.pyc
+│   │       ├── 0053_auto_20210426_1136.cpython-36.pyc
+│   │       ├── 0054_reportshiftperkk_scrap_hasil.cpython-36.pyc
+│   │       ├── 0055_auto_20210503_1259.cpython-36.pyc
+│   │       ├── 0056_auto_20210503_1641.cpython-36.pyc
+│   │       ├── 0057_reportshiftperkk_created_at.cpython-36.pyc
+│   │       ├── 0058_reportshiftperkk_output_std.cpython-36.pyc
+│   │       ├── 0059_auto_20210518_0831.cpython-36.pyc
+│   │       ├── 0060_auto_20210518_0858.cpython-36.pyc
+│   │       ├── 0061_auto_20210518_0903.cpython-36.pyc
+│   │       ├── 0062_auto_20210521_0833.cpython-36.pyc
+│   │       ├── 0063_reportshiftperkk_catatan.cpython-36.pyc
+│   │       ├── 0064_reportshiftperkk_trial.cpython-36.pyc
+│   │       ├── 0065_auto_20210524_1040.cpython-36.pyc
+│   │       ├── 0066_auto_20210524_1409.cpython-36.pyc
+│   │       ├── 0067_auto_20210525_0849.cpython-36.pyc
+│   │       ├── 0068_auto_20210525_0859.cpython-36.pyc
+│   │       ├── 0069_auto_20210525_0907.cpython-36.pyc
+│   │       ├── 0070_auto_20210531_1107.cpython-36.pyc
+│   │       ├── 0071_reportrawmaterialperkk.cpython-36.pyc
+│   │       ├── 0072_reportshiftperkk_cleaning.cpython-36.pyc
+│   │       ├── 0073_auto_20210615_1522.cpython-36.pyc
+│   │       ├── 0074_auto_20210615_1604.cpython-36.pyc
+│   │       ├── 0075_auto_20210615_1611.cpython-36.pyc
+│   │       ├── 0076_reportperunit.cpython-36.pyc
+│   │       ├── 0077_reportshiftperkk_tipe_barang.cpython-36.pyc
+│   │       ├── 0078_auto_20210618_1343.cpython-36.pyc
+│   │       ├── 0079_auto_20210622_0957.cpython-36.pyc
+│   │       ├── 0080_auto_20210622_1118.cpython-36.pyc
+│   │       ├── 0081_auto_20210622_1120.cpython-36.pyc
+│   │       ├── 0082_auto_20210622_1120.cpython-36.pyc
+│   │       ├── 0083_auto_20210629_1450.cpython-36.pyc
+│   │       ├── 0084_detailmaterialconsumption_qty_pakai.cpython-36.pyc
+│   │       ├── 0085_auto_20210629_1552.cpython-36.pyc
+│   │       ├── 0086_reportshiftperkk_total_output.cpython-36.pyc
+│   │       ├── 0087_auto_20210707_0853.cpython-36.pyc
+│   │       ├── 0088_reportpermesin.cpython-36.pyc
+│   │       ├── 0089_auto_20210711_2156.cpython-36.pyc
+│   │       ├── 0090_auto_20210711_2157.cpython-36.pyc
+│   │       ├── 0091_auto_20210711_2157.cpython-36.pyc
+│   │       ├── 0092_auto_20210713_1200.cpython-36.pyc
+│   │       ├── 0093_auto_20210713_1201.cpython-36.pyc
+│   │       ├── 0094_auto_20210713_1202.cpython-36.pyc
+│   │       ├── 0095_reportshiftperkk_byproduct.cpython-36.pyc
+│   │       ├── 0096_auto_20210714_1653.cpython-36.pyc
+│   │       ├── 0097_auto_20210715_0810.cpython-36.pyc
+│   │       ├── 0098_reportperproductgroup.cpython-36.pyc
+│   │       ├── 0099_auto_20210723_1418.cpython-36.pyc
+│   │       ├── 0100_auto_20210726_1129.cpython-36.pyc
+│   │       ├── 0101_auto_20210806_1012.cpython-36.pyc
+│   │       ├── 0102_auto_20210810_1420.cpython-36.pyc
+│   │       ├── 0103_auto_20210813_1535.cpython-36.pyc
+│   │       ├── 0104_auto_20210824_0934.cpython-36.pyc
+│   │       ├── 0105_auto_20210826_1016.cpython-36.pyc
+│   │       ├── 0106_auto_20210826_1018.cpython-36.pyc
+│   │       ├── 0107_detailfinishedgoodkk.cpython-36.pyc
+│   │       ├── 0108_auto_20210826_1525.cpython-36.pyc
+│   │       ├── 0109_auto_20210826_1554.cpython-36.pyc
+│   │       ├── 0110_prefilledform.cpython-36.pyc
+│   │       └── __init__.cpython-36.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-36.pyc
+│   │   ├── apps.cpython-36.pyc
+│   │   ├── forms.cpython-36.pyc
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── list_disp_methods.cpython-36.pyc
+│   │   └── models.cpython-36.pyc
+│   ├── templatetags
+│   │   ├── cl_summary.py
+│   │   ├── dict_of_dict.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── cl_summary.cpython-36.pyc
+│   │   │   ├── dict_of_dict.cpython-36.pyc
+│   │   │   ├── __init__.cpython-36.pyc
+│   │   │   ├── report_breadcrumbs.cpython-36.pyc
+│   │   │   └── report_tags.cpython-36.pyc
+│   │   ├── report_breadcrumbs.py
+│   │   └── report_tags.py
+│   ├── tests.py
+│   └── views.py
+├── log
+│   ├── debug.log
+│   ├── debug.log.bak
+│   ├── ip_29-06-2021.log
+│   ├── iplog_01-07-2021.log
+│   ├── iplog_02-07-2021.log
+│   ├── iplog_03-07-2021.log
+│   ├── iplog_04-07-2021.log
+│   ├── iplog_07-07-2021.log
+│   ├── iplog_08-07-2021.log
+│   ├── iplog_09-07-2021.log
+│   ├── iplog_12-07-2021.log
+│   ├── iplog_13-07-2021.log
+│   ├── iplog_14-07-2021.log
+│   ├── iplog_15-07-2021.log
+│   ├── iplog_16-07-2021.log
+│   ├── iplog_17-07-2021.log
+│   ├── iplog_20-07-2021.log
+│   ├── iplog_21-07-2021.log
+│   ├── iplog_22-07-2021.log
+│   ├── iplog_23-07-2021.log
+│   ├── iplog_24-07-2021.log
+│   ├── iplog_25-05-2021.log
+│   ├── iplog_25-07-2021.log
+│   ├── iplog_27-07-2021.log
+│   ├── iplog_30-06-2021.log
+│   ├── iplog_31-07-2021.log
+│   ├── ip.log.bak2
+│   ├── warning.log
+│   ├── warning.log.bak
+│   └── wireshark.pcap
+├── manage.py
+├── masterdata
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_auto_20210308_1546.py
+│   │   ├── 0003_auto_20210308_1613.py
+│   │   ├── 0004_auto_20210310_1600.py
+│   │   ├── 0005_auto_20210310_1623.py
+│   │   ├── 0006_auto_20210315_1014.py
+│   │   ├── 0007_remove_masterstatus_status_id.py
+│   │   ├── 0008_auto_20210317_1508.py
+│   │   ├── 0009_auto_20210317_1512.py
+│   │   ├── 0010_masterkapasitasmesin_warna.py
+│   │   ├── 0011_remove_masterbarang_warna.py
+│   │   ├── 0012_masterbarang_warna.py
+│   │   ├── 0013_remove_masterkapasitasmesin_warna.py
+│   │   ├── 0014_masterkapasitasmesin_warna.py
+│   │   ├── 0015_masterkapasitasmesin_tebal.py
+│   │   ├── 0016_auto_20210322_1159.py
+│   │   ├── 0017_auto_20210324_1551.py
+│   │   ├── 0018_masterbarang_lebar.py
+│   │   ├── 0019_mastergroup_tipe.py
+│   │   ├── 0020_masterkapasitasmesin_prop.py
+│   │   ├── 0021_auto_20210405_1635.py
+│   │   ├── 0022_masterkapasitasmesin_tebal_aux.py
+│   │   ├── 0023_auto_20210408_0945.py
+│   │   ├── 0024_masterbarang_aktif.py
+│   │   ├── 0025_auto_20210413_0847.py
+│   │   ├── 0026_auto_20210416_0921.py
+│   │   ├── 0027_auto_20210416_0924.py
+│   │   ├── 0028_auto_20210421_1425.py
+│   │   ├── 0029_auto_20210421_1426.py
+│   │   ├── 0030_auto_20210421_1427.py
+│   │   ├── 0031_auto_20210421_1502.py
+│   │   ├── 0032_auto_20210421_1600.py
+│   │   ├── 0033_masterbarang_bobot_reject.py
+│   │   ├── 0034_auto_20210510_0927.py
+│   │   ├── 0035_masterbarang_user_group_aux.py
+│   │   ├── 0036_auto_20210517_1557.py
+│   │   ├── 0037_remove_masterbarang_user_group_aux.py
+│   │   ├── 0038_auto_20210614_0915.py
+│   │   ├── 0039_auto_20210615_1458.py
+│   │   ├── 0040_mastergroup_kategori_rm.py
+│   │   ├── 0041_auto_20210622_1148.py
+│   │   ├── 0042_auto_20210726_1109.py
+│   │   ├── 0043_auto_20210726_1423.py
+│   │   ├── 0044_auto_20210726_1424.py
+│   │   ├── 0045_auto_20210726_1425.py
+│   │   ├── 0046_auto_20210726_1425.py
+│   │   ├── 0047_auto_20210806_1018.py
+│   │   ├── 0048_auto_20210823_0949.py
+│   │   ├── 0049_masterbarang_berat_standar_fg.py
+│   │   ├── 0050_auto_20210825_1624.py
+│   │   ├── 0051_auto_20210825_1627.py
+│   │   ├── 0052_auto_20210825_1628.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-36.pyc
+│   │       ├── 0002_auto_20210308_1546.cpython-36.pyc
+│   │       ├── 0003_auto_20210308_1613.cpython-36.pyc
+│   │       ├── 0004_auto_20210309_1437.cpython-36.pyc
+│   │       ├── 0004_auto_20210310_1600.cpython-36.pyc
+│   │       ├── 0005_auto_20210310_1623.cpython-36.pyc
+│   │       ├── 0006_auto_20210315_1014.cpython-36.pyc
+│   │       ├── 0007_remove_masterstatus_status_id.cpython-36.pyc
+│   │       ├── 0008_auto_20210317_1508.cpython-36.pyc
+│   │       ├── 0009_auto_20210317_1512.cpython-36.pyc
+│   │       ├── 0010_masterkapasitasmesin_warna.cpython-36.pyc
+│   │       ├── 0011_remove_masterbarang_warna.cpython-36.pyc
+│   │       ├── 0011_remove_masterkapasitasmesin_warna.cpython-36.pyc
+│   │       ├── 0012_masterbarang_warna.cpython-36.pyc
+│   │       ├── 0012_masterkapasitasmesin_warna.cpython-36.pyc
+│   │       ├── 0013_remove_masterkapasitasmesin_warna.cpython-36.pyc
+│   │       ├── 0014_masterkapasitasmesin_warna.cpython-36.pyc
+│   │       ├── 0015_masterkapasitasmesin_tebal.cpython-36.pyc
+│   │       ├── 0016_auto_20210322_1159.cpython-36.pyc
+│   │       ├── 0017_auto_20210324_1551.cpython-36.pyc
+│   │       ├── 0018_masterbarang_lebar.cpython-36.pyc
+│   │       ├── 0019_mastergroup_tipe.cpython-36.pyc
+│   │       ├── 0020_masterkapasitasmesin_prop.cpython-36.pyc
+│   │       ├── 0021_auto_20210405_1635.cpython-36.pyc
+│   │       ├── 0022_masterkapasitasmesin_tebal_aux.cpython-36.pyc
+│   │       ├── 0023_auto_20210408_0945.cpython-36.pyc
+│   │       ├── 0024_masterbarang_aktif.cpython-36.pyc
+│   │       ├── 0025_auto_20210413_0847.cpython-36.pyc
+│   │       ├── 0026_auto_20210416_0921.cpython-36.pyc
+│   │       ├── 0027_auto_20210416_0924.cpython-36.pyc
+│   │       ├── 0028_auto_20210421_1425.cpython-36.pyc
+│   │       ├── 0029_auto_20210421_1426.cpython-36.pyc
+│   │       ├── 0030_auto_20210421_1427.cpython-36.pyc
+│   │       ├── 0031_auto_20210421_1502.cpython-36.pyc
+│   │       ├── 0032_auto_20210421_1600.cpython-36.pyc
+│   │       ├── 0033_masterbarang_bobot_reject.cpython-36.pyc
+│   │       ├── 0034_auto_20210510_0927.cpython-36.pyc
+│   │       ├── 0035_masterbarang_user_group_aux.cpython-36.pyc
+│   │       ├── 0036_auto_20210517_1557.cpython-36.pyc
+│   │       ├── 0037_remove_masterbarang_user_group_aux.cpython-36.pyc
+│   │       ├── 0038_auto_20210614_0915.cpython-36.pyc
+│   │       ├── 0039_auto_20210615_1458.cpython-36.pyc
+│   │       ├── 0040_mastergroup_kategori_rm.cpython-36.pyc
+│   │       ├── 0041_auto_20210622_1148.cpython-36.pyc
+│   │       ├── 0042_auto_20210726_1109.cpython-36.pyc
+│   │       ├── 0043_auto_20210726_1423.cpython-36.pyc
+│   │       ├── 0044_auto_20210726_1424.cpython-36.pyc
+│   │       ├── 0045_auto_20210726_1425.cpython-36.pyc
+│   │       ├── 0046_auto_20210726_1425.cpython-36.pyc
+│   │       ├── 0047_auto_20210806_1018.cpython-36.pyc
+│   │       ├── 0048_auto_20210823_0949.cpython-36.pyc
+│   │       ├── 0049_masterbarang_berat_standar_fg.cpython-36.pyc
+│   │       ├── 0050_auto_20210825_1624.cpython-36.pyc
+│   │       ├── 0051_auto_20210825_1627.cpython-36.pyc
+│   │       ├── 0052_auto_20210825_1628.cpython-36.pyc
+│   │       └── __init__.cpython-36.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-36.pyc
+│   │   ├── apps.cpython-36.pyc
+│   │   ├── __init__.cpython-36.pyc
+│   │   └── models.cpython-36.pyc
+│   ├── tests.py
+│   └── views.py
+├── oee_impc
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── logging_filters.cpython-36.pyc
+│   │   ├── logging_mw.cpython-36.pyc
+│   │   ├── settings.cpython-36.pyc
+│   │   ├── urls.cpython-36.pyc
+│   │   └── wsgi.cpython-36.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static
+│   ├── dist
+│   │   ├── jautocalc.js
+│   │   ├── jautocalc.js.map
+│   │   ├── jautocalc.min.js
+│   │   └── typings.d.ts
+│   ├── img
+│   │   └── favicon.ico
+│   └── js
+│       ├── mass_diff.js
+│       └── std_weight.js
+├── templates
+│   └── admin
+│       ├── aux_dropdown_filter.html
+│       ├── base_site.html
+│       ├── cl_summary.html
+│       ├── custom_change_list_report.html
+│       ├── downtime_by_mesin_change_form.html
+│       ├── downtime_by_mesin_change_list.html
+│       ├── hidden_filter_for_qparam.html
+│       ├── nav_sidebar.html
+│       ├── prefilled_form_changelist.html
+│       ├── prefilled_form.html
+│       ├── report_by_kk_change_form.html
+│       ├── report_by_kk_change_form.html.bak
+│       ├── report_by_mesin_detailed_change_list.html
+│       ├── report_by_mesin_vs_waktu_change_list.html
+│       ├── report_by_product_group_change_list.html
+│       ├── report_by_unit_change_list.html
+│       ├── report_by_waktu_change_list.html
+│       ├── report_rm_change_list.html
+│       ├── report_table.html
+│       ├── report_w_total.html
+│       └── shift_form_w_calc.html
+└── tools
+    ├── cpd-tbu.csv
+    ├── hollow3.csv
+    ├── hollow3_try.csv
+    ├── lc-tbu.csv
+    ├── pipe-tbu.csv
+    ├── script
+    │   ├── berat std fg.py
+    │   ├── excel_to_django_Hollow 3.py
+    │   ├── excel_to_django.py
+    │   ├── excel_to_django_UPC_cpd.py
+    │   ├── excel_to_django_UPC_lc.py
+    │   ├── excel_to_django_UPC_pipe.py
+    │   ├── excel_to_django_UPC.py
+    │   ├── extract float num from csv.py
+    │   ├── refresh db.py
+    │   └── user_permissions.py
+    ├── tobeuploaded-PC.csv
+    └── UPC-Tobeuploaded.csv
+/F [error opening dir]
+/A [error opening dir]
+
+21 directories, 455 files

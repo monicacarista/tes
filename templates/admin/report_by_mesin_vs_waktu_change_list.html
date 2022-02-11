@@ -1,0 +1,98 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block content_title %}
+<h1> Report Produksi Per Mesin </h1>
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  
+  <table id="result_list" class="display cell-border compact">
+    {% for data in summary %} 
+    <thead class="alert-success">
+      <tr>
+        <th>
+          <div class="text">
+            <a>{{data.mesin}}</a>
+          </div>
+        </th>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="font-weight:bold">
+        <td> FG (kg) </td>
+        {% for cell in data.fg %}
+        <td class="table_number"> {{ cell }} </td>
+        {% endfor %}
+      </tr>
+      <tr>
+        <td> FTY </td>
+        {% for cell in data.fty %}
+        <td class="table_number"> {{ cell }} </td>
+        {% endfor %}
+      </tr>
+      <tr>
+        <td> Availibility </td>
+        {% for cell in data.availibility %}
+        <td class="table_number"> {{ cell }} </td>
+        {% endfor %}
+      </tr>
+      <tr>
+        <td> Performance </td>
+        {% for cell in data.performance %}
+        <td class="table_number"> {{ cell }} </td>
+        {% endfor %}
+      </tr>
+      <tr style="font-weight:bold">
+        <td style="border-top:1px solid"> OEE </td>
+        {% for cell in data.oee %}
+        <td class="table_number" style="border-top:1px solid"> {{ cell }} </td>
+        {% endfor %}
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+  <br>
+</div>
+{% endblock %}
+
+
+
+{% block footer %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+ -->
+<script type="text/javascript">
+
+  var table = $('#result_list').DataTable({
+      pageLength: 50,
+      columns: [
+        { orderable: false },
+        null,
+        null,
+        null,
+        null
+      ]
+  }) 
+</script>
+{% endblock %}

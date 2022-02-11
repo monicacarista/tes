@@ -1,0 +1,264 @@
+ERROR 2021-12-24 13:35:04,112 log 2808746 140383793415936 Internal Server Error: /admin/form_produksi/reportperproductgroup/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2934, in changelist_view
+    no_kk__item_example__group__tipe_id=request.GET["tipe__id"])
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1778, in get_prep_value
+    ) from e
+ValueError: Field 'id' expected a number but got ''.
+ERROR 2021-12-24 13:35:04,127 basehttp 2808746 140383793415936 "GET /admin/form_produksi/reportperproductgroup/?creation_date__month=12&creation_date__year=2021&is_export__exact=1&tipe__id=&user_group__id__exact=6 HTTP/1.1" 500 145511
+ERROR 2021-12-24 13:43:41,104 log 2810709 140011160725248 Internal Server Error: /admin/form_produksi/reportperproductgroup/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2914, in changelist_view
+    extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 748, in get_changelist_instance
+    sortable_by,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 99, in __init__
+    self.queryset = self.get_queryset(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 454, in get_queryset
+    new_qs = filter_spec.queryset(request, qs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 603, in queryset
+    return queryset.filter(item_exampe__tipe_id=self.value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'item_exampe' into field. Choices are: aktif, cleaning, created_at, creation_date, detailkkfinishedgood, detailkkrawmaterial, id, is_export, item_example, item_example_id, no_kk, productionform, trial, user_group, user_group_id
+ERROR 2021-12-24 13:43:41,177 basehttp 2810709 140011160725248 "GET /admin/form_produksi/reportperproductgroup/?creation_date__month=12&creation_date__year=2021&is_export__exact=1&user_group__id__exact=6 HTTP/1.1" 500 167138
+ERROR 2021-12-24 13:43:50,360 log 2810709 140011160725248 Internal Server Error: /admin/form_produksi/reportperproductgroup/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2914, in changelist_view
+    extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 748, in get_changelist_instance
+    sortable_by,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 99, in __init__
+    self.queryset = self.get_queryset(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 454, in get_queryset
+    new_qs = filter_spec.queryset(request, qs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 603, in queryset
+    return queryset.filter(item_example__tipe_id=self.value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'item_exampe' into field. Choices are: aktif, cleaning, created_at, creation_date, detailkkfinishedgood, detailkkrawmaterial, id, is_export, item_example, item_example_id, no_kk, productionform, trial, user_group, user_group_id
+ERROR 2021-12-24 13:43:50,383 basehttp 2810709 140011160725248 "GET /admin/form_produksi/reportperproductgroup/?creation_date__month=12&creation_date__year=2021&is_export__exact=1&user_group__id__exact=6 HTTP/1.1" 500 167140
+ERROR 2021-12-24 13:43:52,593 log 2810722 140171693520640 Internal Server Error: /admin/form_produksi/reportperproductgroup/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2914, in changelist_view
+    extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 748, in get_changelist_instance
+    sortable_by,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 99, in __init__
+    self.queryset = self.get_queryset(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 454, in get_queryset
+    new_qs = filter_spec.queryset(request, qs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 603, in queryset
+    return queryset.filter(item_example__tipe_id=self.value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <bound method SimpleListFilter.value of <form_produksi.admin.KKWIPFilter object at 0x7f7c48616470>>.
+ERROR 2021-12-24 13:43:52,663 basehttp 2810722 140171693520640 "GET /admin/form_produksi/reportperproductgroup/?creation_date__month=12&creation_date__year=2021&is_export__exact=1&user_group__id__exact=6 HTTP/1.1" 500 182243
+ERROR 2021-12-24 13:45:20,047 log 2811117 140372706694912 Internal Server Error: /admin/form_produksi/reportperproductgroup/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 2913, in changelist_view
+    extra_context=extra_context,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 748, in get_changelist_instance
+    sortable_by,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 99, in __init__
+    self.queryset = self.get_queryset(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/views/main.py", line 454, in get_queryset
+    new_qs = filter_spec.queryset(request, qs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 604, in queryset
+    return queryset.filter(item_example__tipe_id=self.value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <bound method SimpleListFilter.value of <form_produksi.admin.KKWIPFilter object at 0x7fab10a769e8>>.
+ERROR 2021-12-24 13:45:20,131 basehttp 2811117 140372706694912 "GET /admin/form_produksi/reportperproductgroup/?creation_date__month=12&creation_date__year=2021&is_export__exact=1&tipe__id=3&user_group__id__exact=6 HTTP/1.1" 500 182431
+WARNING 2021-12-24 14:33:33,955 log 2811706 139708768184064 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2021-12-24 14:33:33,955 basehttp 2811706 139708768184064 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown HTTP/1.1" 403 26
+WARNING 2021-12-24 15:04:12,899 log 2811706 139708759791360 Forbidden: /admin/form_maintenance/breakdownevent/autocomplete/
+WARNING 2021-12-24 15:04:12,900 basehttp 2811706 139708759791360 "GET /admin/form_maintenance/breakdownevent/autocomplete/?app_label=form_produksi&model_name=detaildowntime&field_name=form_breakdown HTTP/1.1" 403 26
+WARNING 2021-12-24 15:33:08,284 basehttp 2811706 139708373923584 "  /*à     Cookie: mstshash=Administr" 400 -

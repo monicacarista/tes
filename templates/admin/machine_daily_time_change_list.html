@@ -1,0 +1,85 @@
+{% extends "admin/custom_change_list_report.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+
+{% block content_title %}
+<h1> Report Produksi Per Mesin </h1>
+{% endblock %}
+
+{% block result_list %}
+<br>
+<div class="results">
+  
+  <table id="result_list" class="display cell-border compact">
+    <thead class="alert-success">
+      <tr>
+        {% for fields in table_fields %}
+        <th>
+          <div class="text">
+            <a>{{fields}}</a>
+          </div>
+        </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in summary %} 
+      <tr>
+        {% for cell in data %}
+
+        {% if forloop.first %}
+        <td class="table_number">
+          {{cell}}
+        </td>
+
+        {% else %}
+        <td class="table_number">
+          <a href={{cell.2}}>
+          {% if cell.1 %}
+          <mark>{{cell.0}}</mark>
+          {% else %}
+          {{cell.0}}
+          {% endif %}
+          </a>
+        </td>
+
+        {% endif%}
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+      </table>
+  <br>
+</div>
+{% endblock %}
+
+
+
+{% block footer %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+ -->
+<script type="text/javascript">
+
+  var table = $('#result_list').DataTable({
+      pageLength: 50,
+      columns: [
+        { orderable: false },
+        null,
+        null,
+        null,
+        null
+      ]
+  }) 
+</script>
+{% endblock %}

@@ -1,0 +1,212 @@
+ERROR 2021-09-21 08:46:27,524 log 316590 140564778444544 Internal Server Error: /admin/form_produksi/reportbykk/1859/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 941, in change_view
+    data_fg = form_shift.values('machine__mesin', produk__nama=F('detailproductionresults__produk__nama'), produk__kode_barang=F('detailproductionresults__produk__kode_barang'), produk__berat_unit="detailproductionresults__berat_unit_sample").annotate(qty=Sum("detailproductionresults__hasil_jadi_qty"), fg=Sum(
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 841, in values
+    clone = self._values(*fields, **expressions)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 834, in _values
+    clone = clone.annotate(**expressions)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1087, in annotate
+    self._validate_values_are_expressions(args + tuple(kwargs.values()), method_name='annotate')
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1376, in _validate_values_are_expressions
+    ', '.join(invalid_args),
+TypeError: QuerySet.annotate() received non-expression(s): detailproductionresults__berat_unit_sample.
+ERROR 2021-09-21 08:46:27,527 basehttp 316590 140564778444544 "GET /admin/form_produksi/reportbykk/1859/change/?_changelist_filters=all%3D%26creation_date__month%3D8%26creation_date__year%3D2021%26o%3D0 HTTP/1.1" 500 104851
+ERROR 2021-09-21 08:47:48,595 log 316667 140017965586176 Internal Server Error: /admin/form_produksi/reportbykk/1859/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/options.py", line 575, in get_field
+    return self.fields_map[field_name]
+KeyError: 'daftar_fg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/utils.py", line 265, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/utils.py", line 296, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/options.py", line 577, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: ProductionForm has no field named 'daftar_fg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1584, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'mass_std' for AutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 192, in render
+    return template.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 172, in render
+    return self._render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 516, in render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 516, in render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 516, in render
+    return self.nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/helpers.py", line 196, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/utils.py", line 274, in lookup_field
+    value = attr(obj)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 814, in daftar_fg
+    barang = barang.values_list("produk__nama", "hasil_jadi_qty", "fg_mass", "berat_unit_sample", "produk__mass_std")
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 868, in values_list
+    clone = self._values(*_fields, **expressions)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 836, in _values
+    clone.query.set_values(fields)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 2174, in set_values
+    self.add_fields(field_names, True)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1870, in add_fields
+    cols.append(join_info.transform_function(target, final_alias))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1588, in transform
+    raise last_field_exception
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1566, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mass_std' into field. Choices are: aktif, berat_standar_fg, bobot_reject, detailkkfinishedgood, detailmaterialconsumption, detailpackagingusage, detailproductionresults, group, group_id, gsm, id, kode_barang, lebar, lebar_ext, nama, panjang, prop1, prop1_id, tebal1, tebal2, tipe, tipe_id, uom, uom_id, user_group, user_group_id, warna, warna_id
+ERROR 2021-09-21 11:46:30,286 basehttp 316690 140090858489600 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2021-09-21 11:59:52,933 log 316690 140090595591936 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-21 11:59:52,933 basehttp 316690 140090595591936 "GET /admin/form_produksi/reportshiftperkk/ HTTP/1.1" 404 8743
+WARNING 2021-09-21 12:00:00,617 log 316690 140090595591936 Not Found: /admin/form_produksi/reportshiftperkk/
+WARNING 2021-09-21 12:00:00,617 basehttp 316690 140090595591936 "GET /admin/form_produksi/reportshiftperkk/ HTTP/1.1" 404 8743
+ERROR 2021-09-21 15:17:04,248 exception 316690 140089996855040 Invalid HTTP_HOST header: 'fingerprints.bablosoft.com:80'. You may need to add 'fingerprints.bablosoft.com' to ALLOWED_HOSTS.
+WARNING 2021-09-21 15:17:04,306 log 316690 140089996855040 Bad Request: /178.128.34.99:80
+WARNING 2021-09-21 15:17:04,668 basehttp 316690 140089996855040 "CONNECT 178.128.34.99:80 HTTP/1.1" 400 63470
+WARNING 2021-09-21 15:17:13,856 basehttp 316690 140089996855040 " P²"c0 " 400 -
+ERROR 2021-09-21 15:17:14,277 exception 316690 140089996855040 Invalid HTTP_HOST header: 'fingerprints.bablosoft.com'. You may need to add 'fingerprints.bablosoft.com' to ALLOWED_HOSTS.
+WARNING 2021-09-21 15:17:14,335 log 316690 140089996855040 Bad Request: /http:/fingerprints.bablosoft.com/ip
+WARNING 2021-09-21 15:17:14,713 basehttp 316690 140089996855040 "POST http://fingerprints.bablosoft.com/ip?Z76675610160Q1 HTTP/1.1" 400 65306
+WARNING 2021-09-21 15:17:23,893 basehttp 316690 140089996855040 " " 400 -

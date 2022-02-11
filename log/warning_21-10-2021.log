@@ -1,0 +1,346 @@
+ERROR 2021-10-20 22:42:48,866 log 95415 139671786755840 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1788, in changelist_view
+    total_days = get_total_time_single_machine(qs, period, self.date_hierarchy, year=year, month=month)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1937, in get_total_time_single_machine
+    if year >= now.year:
+TypeError: '>=' not supported between instances of 'str' and 'int'
+ERROR 2021-10-20 22:42:48,918 basehttp 95415 139671786755840 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 89080
+ERROR 2021-10-20 22:43:40,171 log 95473 139742059935488 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1788, in changelist_view
+    total_days = get_total_time_single_machine(qs, period, self.date_hierarchy, year=year, month=month)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1937, in get_total_time_single_machine
+    month = int(month)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2021-10-20 22:43:40,227 basehttp 95473 139742059935488 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 89183
+ERROR 2021-10-20 22:44:19,419 log 95478 139837088724736 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1787, in changelist_view
+    year, month, day = get_date_from_request(request, self.date_hierarchy)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1974, in get_date_from_request
+    return int(year), int(month), int(day)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2021-10-20 22:44:19,485 basehttp 95478 139837088724736 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 87022
+ERROR 2021-10-20 22:44:20,759 log 95478 139837088724736 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1787, in changelist_view
+    year, month, day = get_date_from_request(request, self.date_hierarchy)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1974, in get_date_from_request
+    return int(year), int(month), int(day)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2021-10-20 22:44:20,805 basehttp 95478 139837088724736 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 87022
+ERROR 2021-10-20 22:44:22,091 log 95478 139837088724736 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1787, in changelist_view
+    year, month, day = get_date_from_request(request, self.date_hierarchy)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1974, in get_date_from_request
+    return int(year), int(month), int(day)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2021-10-20 22:44:22,139 basehttp 95478 139837088724736 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 87022
+ERROR 2021-10-20 22:46:58,175 log 95556 140218108049152 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1834, in changelist_view
+    td[mesin_idx.get(i['machine__mesin'])][3] = i['daily_time'] * total_days
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+ERROR 2021-10-20 22:46:58,220 basehttp 95556 140218108049152 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 98489
+ERROR 2021-10-20 22:46:59,207 log 95556 140218108049152 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1834, in changelist_view
+    td[mesin_idx.get(i['machine__mesin'])][3] = i['daily_time'] * total_days
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+ERROR 2021-10-20 22:46:59,255 basehttp 95556 140218108049152 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 98489
+ERROR 2021-10-20 22:48:46,765 log 95614 140011091375872 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1834, in changelist_view
+    td[mesin_idx.get(i['machine__mesin'])][3] = i['daily_time'] * total_days
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+ERROR 2021-10-20 22:48:46,819 basehttp 95614 140011091375872 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 98489
+ERROR 2021-10-20 22:50:50,620 log 95681 139676117800704 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1849, in changelist_view
+    d
+NameError: name 'd' is not defined
+ERROR 2021-10-20 22:50:50,684 basehttp 95681 139676117800704 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__month=1&normalized_date__year=2021 HTTP/1.1" 500 95466
+ERROR 2021-10-20 22:54:03,149 log 95787 140603284559616 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1855, in changelist_view
+    d
+NameError: name 'd' is not defined
+ERROR 2021-10-20 22:54:03,205 basehttp 95787 140603284559616 "GET /admin/form_produksi/reportdowntimepermesin/?normalized_date__year=2021 HTTP/1.1" 500 100819
+WARNING 2021-10-20 23:37:28,480 basehttp 95854 140598637754112 "Z¥     " 400 -
+WARNING 2021-10-21 00:04:01,545 basehttp 95854 140598613362432 "Z¥     " 400 -
+WARNING 2021-10-21 01:10:31,719 basehttp 95854 140598637754112 "Z¥     " 400 -
+ERROR 2021-10-21 02:28:48,814 exception 95854 140598637754112 Invalid HTTP_HOST header: 'proxy.kagda.ru:80'. You may need to add 'proxy.kagda.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-21 02:28:48,875 log 95854 140598637754112 Bad Request: /91.214.48.87:80
+WARNING 2021-10-21 02:28:49,496 basehttp 95854 140598637754112 "CONNECT 91.214.48.87:80 HTTP/1.1" 400 63279
+WARNING 2021-10-21 02:28:58,436 basehttp 95854 140598637754112 " P[Ö0W0 " 400 -
+ERROR 2021-10-21 02:28:58,850 exception 95854 140598637754112 Invalid HTTP_HOST header: 'proxy.kagda.ru'. You may need to add 'proxy.kagda.ru' to ALLOWED_HOSTS.
+WARNING 2021-10-21 02:28:58,908 log 95854 140598637754112 Bad Request: /http:/proxy.kagda.ru/myip2.php
+WARNING 2021-10-21 02:28:59,269 basehttp 95854 140598637754112 "POST http://proxy.kagda.ru/myip2.php?Z76675610160Q1 HTTP/1.1" 400 65071
+WARNING 2021-10-21 02:29:03,462 basehttp 95854 140599002650368 " " 400 -
+WARNING 2021-10-21 04:55:56,609 basehttp 95854 140598629361408 "  /*à     Cookie: mstshash=Administr" 400 -
+WARNING 2021-10-21 05:03:26,601 basehttp 95854 140598629361408 "Z¥     " 400 -
+WARNING 2021-10-21 07:13:47,386 basehttp 95854 140596576491264 "  /*à     Cookie: mstshash=Administr" 400 -
+WARNING 2021-10-21 09:07:47,175 basehttp 95854 140596500956928 "jËpa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            " 400 -
+ERROR 2021-10-21 09:42:44,937 log 95854 140596517742336 Internal Server Error: /admin/form_produksi/reportdowntimepermesin/62/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1882, in change_view
+    form_shift = form_shift.filter(**q_params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1150, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1200, in try_transform
+    "permitted%s" % (name, output_field.__name__, suggestion)
+django.core.exceptions.FieldError: Unsupported lookup 'range' for DateTimeField or join on the field not permitted, perhaps you meant range or regex?
+ERROR 2021-10-21 09:42:44,940 basehttp 95854 140596517742336 "GET /admin/form_produksi/reportdowntimepermesin/62/change/?normalized_date__range__gte=01%2F10%2F2021&normalized_date__range__lte=20%2F10%2F2021 HTTP/1.1" 500 131731
+ERROR 2021-10-21 10:15:37,938 log 113445 140654072035072 Internal Server Error: /admin/form_produksi/productionform/19964/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 402, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+KeyError: 'groupprofile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'masterdata_groupprofile.weekly_days' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 1392, in save_model
+    obj.save()
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/models.py", line 326, in save
+    self.normalized_date = self.start_time - self.user_group.groupprofile.shift_hour
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 410, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 425, in get
+    num = len(clone)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'masterdata_groupprofile.weekly_days' in 'field list'")
+ERROR 2021-10-21 10:15:39,397 basehttp 113445 140654072035072 "POST /admin/form_produksi/productionform/19964/change/?_changelist_filters=machine__id__exact%3D1%26normalized_date__month%3D10%26normalized_date__year%3D2021%26user_group__id__exact%3D1 HTTP/1.1" 500 237811
+WARNING 2021-10-21 12:19:12,058 basehttp 113667 140522348582656 "  /*à     Cookie: mstshash=Administr" 400 -
+WARNING 2021-10-21 12:47:55,244 basehttp 113667 140521800464128 "   TZ         .    I¨À )z» zÚf Ò~Uñi»©                ÃÐ¢|¦v½óOÑËÜ®Ëd" 400 -
+ERROR 2021-10-21 13:34:05,354 basehttp 113667 140522396051200 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-21 14:53:27,820 basehttp 113667 140522387658496 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2021-10-21 16:23:59,113 exception 113667 140522631325440 Invalid HTTP_HOST header: 'localhost.localdomain:8000'. You may need to add 'localhost.localdomain' to ALLOWED_HOSTS.
+WARNING 2021-10-21 16:23:59,174 log 113667 140522631325440 Bad Request: /
+WARNING 2021-10-21 16:23:59,176 basehttp 113667 140522631325440 "HEAD / HTTP/1.0" 400 63078
+WARNING 2021-10-21 16:23:59,800 log 113667 140522631325440 Not Found: /system_api.php
+WARNING 2021-10-21 16:23:59,800 basehttp 113667 140522631325440 "GET /system_api.php HTTP/1.1" 404 2196
+WARNING 2021-10-21 16:24:02,142 log 113667 140521397810944 Not Found: /c/version.js
+WARNING 2021-10-21 16:24:02,142 basehttp 113667 140521397810944 "GET /c/version.js HTTP/1.1" 404 2190
+WARNING 2021-10-21 16:24:04,454 log 113667 140521397810944 Not Found: /streaming/clients_live.php
+WARNING 2021-10-21 16:24:04,455 basehttp 113667 140521397810944 "GET /streaming/clients_live.php HTTP/1.1" 404 2232
+WARNING 2021-10-21 16:24:06,781 log 113667 140521397810944 Not Found: /stalker_portal/c/version.js
+WARNING 2021-10-21 16:24:06,781 basehttp 113667 140521397810944 "GET /stalker_portal/c/version.js HTTP/1.1" 404 2235
+WARNING 2021-10-21 16:24:09,099 log 113667 140521397810944 Not Found: /stream/live.php
+WARNING 2021-10-21 16:24:09,099 basehttp 113667 140521397810944 "GET /stream/live.php HTTP/1.1" 404 2199
+WARNING 2021-10-21 16:24:11,406 log 113667 140522631325440 Not Found: /flu/403.html
+WARNING 2021-10-21 16:24:11,406 basehttp 113667 140522631325440 "GET /flu/403.html HTTP/1.1" 404 2190

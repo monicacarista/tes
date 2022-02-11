@@ -1,0 +1,441 @@
+ERROR 2021-11-22 12:10:37,393 log 486464 139824044427008 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1595, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, form.instance, change=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2135, in get_formset
+    return inlineformset_factory(self.parent_model, self.model, **defaults)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 1082, in inlineformset_factory
+    FormSet = modelformset_factory(model, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 879, in modelformset_factory
+    error_messages=error_messages, field_classes=field_classes)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 258, in __new__
+    apply_limit_choices_to=False,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 853, in formfield_for_foreignkey
+    if kk:
+UnboundLocalError: local variable 'kk' referenced before assignment
+ERROR 2021-11-22 12:10:37,420 basehttp 486464 139824044427008 "GET /admin/form_produksi/prefilledform/add/ HTTP/1.1" 500 175901
+ERROR 2021-11-22 12:10:39,697 log 486464 139824044427008 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1595, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, form.instance, change=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2135, in get_formset
+    return inlineformset_factory(self.parent_model, self.model, **defaults)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 1082, in inlineformset_factory
+    FormSet = modelformset_factory(model, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 879, in modelformset_factory
+    error_messages=error_messages, field_classes=field_classes)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 258, in __new__
+    apply_limit_choices_to=False,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 853, in formfield_for_foreignkey
+    if kk:
+UnboundLocalError: local variable 'kk' referenced before assignment
+ERROR 2021-11-22 12:10:39,699 basehttp 486464 139824044427008 "GET /admin/form_produksi/prefilledform/add/ HTTP/1.1" 500 176038
+ERROR 2021-11-22 12:11:10,382 log 486464 139824044427008 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1595, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, form.instance, change=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2135, in get_formset
+    return inlineformset_factory(self.parent_model, self.model, **defaults)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 1082, in inlineformset_factory
+    FormSet = modelformset_factory(model, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 879, in modelformset_factory
+    error_messages=error_messages, field_classes=field_classes)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 258, in __new__
+    apply_limit_choices_to=False,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 853, in formfield_for_foreignkey
+    if kk:
+UnboundLocalError: local variable 'kk' referenced before assignment
+ERROR 2021-11-22 12:11:10,383 basehttp 486464 139824044427008 "GET /admin/form_produksi/prefilledform/add/ HTTP/1.1" 500 175901
+ERROR 2021-11-22 12:11:23,412 log 486464 139824044427008 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1595, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, form.instance, change=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2135, in get_formset
+    return inlineformset_factory(self.parent_model, self.model, **defaults)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 1082, in inlineformset_factory
+    FormSet = modelformset_factory(model, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 879, in modelformset_factory
+    error_messages=error_messages, field_classes=field_classes)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 258, in __new__
+    apply_limit_choices_to=False,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 853, in formfield_for_foreignkey
+    if kk:
+UnboundLocalError: local variable 'kk' referenced before assignment
+ERROR 2021-11-22 12:11:23,440 basehttp 486464 139824044427008 "GET /admin/form_produksi/prefilledform/add/ HTTP/1.1" 500 175873
+WARNING 2021-11-22 12:12:01,704 log 486464 139824044427008 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:12:01,705 basehttp 486464 139824044427008 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:12:19,654 log 486464 139824044427008 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:12:19,655 basehttp 486464 139824044427008 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:12:21,024 log 486464 139824044427008 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:12:21,025 basehttp 486464 139824044427008 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:12:49,606 log 486464 139824044427008 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:12:49,607 basehttp 486464 139824044427008 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:17:16,563 log 486691 140410545088256 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:17:16,565 basehttp 486691 140410545088256 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:17:27,508 log 486691 140410545088256 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:17:27,509 basehttp 486691 140410545088256 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:17:30,169 log 486691 140410545088256 Forbidden (Permission denied): /admin/form_produksi/productionform/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1690, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:17:30,170 basehttp 486691 140410545088256 "GET /admin/form_produksi/productionform/ HTTP/1.1" 403 135
+WARNING 2021-11-22 12:17:37,637 log 486691 140410545088256 Forbidden (Permission denied): /admin/form_produksi/productionform/16149/change/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1562, in _changeform_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2021-11-22 12:17:37,638 basehttp 486691 140410545088256 "GET /admin/form_produksi/productionform/16149/change/?_changelist_filters=machine__id__exact%3D2%26user_group__id__exact%3D1 HTTP/1.1" 403 135
+WARNING 2021-11-22 12:30:15,686 basehttp 486691 140410324248320 "Z¥     " 400 -
+ERROR 2021-11-22 13:44:29,437 basehttp 486691 140410545088256 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2021-11-22 14:27:21,548 log 486691 140409846093568 Not Found: /NON_EXISTING_PATH/
+WARNING 2021-11-22 14:27:21,548 basehttp 486691 140409846093568 "GET /NON_EXISTING_PATH/ HTTP/1.1" 404 2208
+ERROR 2021-11-22 15:20:33,867 log 486691 140410553485056 Internal Server Error: /admin/form_produksi/prefilledform/add/
+Traceback (most recent call last):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1595, in _changeform_view
+    formsets, inline_instances = self._create_formsets(request, form.instance, change=False)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 311, in _create_formsets
+    request, obj, change))
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1954, in _create_formsets
+    for FormSet, inline in self.get_formsets_with_inlines(*get_formsets_args):
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 798, in get_formsets_with_inlines
+    yield inline.get_formset(request, obj), inline
+  File "/home/Vieri/.local/lib/python3.6/site-packages/nested_admin/nested.py", line 528, in get_formset
+    return super(NestedInlineModelAdminMixin, self).get_formset(request, obj, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 2135, in get_formset
+    return inlineformset_factory(self.parent_model, self.model, **defaults)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 1082, in inlineformset_factory
+    FormSet = modelformset_factory(model, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 879, in modelformset_factory
+    error_messages=error_messages, field_classes=field_classes)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 258, in __new__
+    apply_limit_choices_to=False,
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/forms/models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "/home/Vieri/.local/lib/python3.6/site-packages/django/contrib/admin/options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "/home/Vieri/project_dir/oee_impc/form_produksi/admin.py", line 853, in formfield_for_foreignkey
+    if kk:
+UnboundLocalError: local variable 'kk' referenced before assignment
+ERROR 2021-11-22 15:20:33,933 basehttp 486691 140410553485056 "GET /admin/form_produksi/prefilledform/add/ HTTP/1.1" 500 175931
+WARNING 2021-11-22 16:48:27,013 log 529134 140274422425344 Forbidden: /admin/masterdata/mastermesin/autocomplete/
+WARNING 2021-11-22 16:48:27,013 basehttp 529134 140274422425344 "GET /admin/masterdata/mastermesin/autocomplete/?app_label=form_produksi&model_name=productionform&field_name=machine HTTP/1.1" 403 26
+WARNING 2021-11-22 16:48:28,538 log 529134 140274422425344 Forbidden: /admin/masterdata/mastermesin/autocomplete/
+WARNING 2021-11-22 16:48:28,539 basehttp 529134 140274422425344 "GET /admin/masterdata/mastermesin/autocomplete/?app_label=form_produksi&model_name=productionform&field_name=machine HTTP/1.1" 403 26
+WARNING 2021-11-22 16:48:32,848 log 529134 140274422425344 Forbidden: /admin/masterdata/mastermesin/autocomplete/
+WARNING 2021-11-22 16:48:32,848 basehttp 529134 140274422425344 "GET /admin/masterdata/mastermesin/autocomplete/?app_label=form_produksi&model_name=productionform&field_name=machine&term=nok HTTP/1.1" 403 26

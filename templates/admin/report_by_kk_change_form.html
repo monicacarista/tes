@@ -1,0 +1,136 @@
+{% extends "admin/change_form.html" %}
+
+{% load humanize %}
+{% load report_tags %}
+{% load dict_of_dict %}
+
+{% block extrastyle %}
+{{ block.super }}
+
+<style>
+.table_number {
+text-align: right;
+}
+</style>
+
+{% endblock %}
+
+{% block after_related_objects %}
+<h1>Raw Material and Finished Good</h1>
+{% for mesin, data in dataset.items %}
+<h2>{{mesin}}</h2>
+<div style="overflow: scroll; display: flex; flex-wrap: wrap; margin-right: auto;">
+    <div style="margin-right: auto; flex: 0 0 30%;">
+        <h3>Raw Material : {{data.summary.rm | floatformat:2 | intcomma }} kg</h3>
+        <table class="rm">
+            <thead>
+                <tr>
+                    {% for fields in field_rm %}
+                    <th>
+                        <div class="text">
+                            <a>{{fields | capfirst}}</a>
+                        </div>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data.rm %}
+                <tr>
+                    <td class="table_compact"> {{ row.bahan__nama }} </td>
+                    <td class="table_number"> {{ row.rm | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-right: auto; flex: 0 0 37%;">
+        <h3>Finished Good : {{data.summary.fg_weight | floatformat:2 | intcomma }} kg</h3>
+        <table class="fg">
+            <thead>
+                <tr>
+                    {% for fields in field_fg %}
+                    <th>
+                        <div class="text">
+                            <a>{{fields}}</a>
+                        </div>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data.fg %}
+                <tr>
+                    <td class="table_compact"> {{ row.produk__nama }} </td>
+                    <td class="table_number"> {{ row.qty | floatformat:2 | intcomma }} </td>
+                    <td class="table_number"> {{ row.fg | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-right: auto; flex: 0 0 30%;">
+        <h3>Byproduct : {{data.summary.bp | floatformat:2 | intcomma }} kg</h3>
+        <table class="bp">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="text">
+                            <a>Byproduct</a>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="text">
+                            <a>Total</a>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in data.bp.items %}
+                <tr>
+                    <td class="table_compact"> {{ key | capfirst }} </td>
+                    <td class="table_number"> {{ value | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-right: auto; order:100; flex: 1 1 100%;">
+        <h3>Downtime</h3>
+        <table class="dt">
+            <thead>
+                <tr>
+                    {% for fields in field_dt %}
+                    <th>
+                        <div class="text">
+                            <a>{{fields}}</a>
+                        </div>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data.dt %}
+                <tr>
+                    <td class="table_compact" style="width: 20%;"> {{ row.start_time }} </td>
+                    <td class="table_compact" style="width: 1%;">Shift {{ row.shift }} </td>
+                    <td class="table_number"> {{ row.dt_start | date:"G:i" }} </td>
+                    <td class="table_number"> {{ row.dt_end | date:"G:i"}} </td>
+                    <td class="table_compact"> {{ dict_dt | keyvalue:row.dt_kategori }} </td>
+                    <td class="table_compact"> {{ row.dt_notes }} </td>
+                    <td class="table_number"> {{ row.dt_durasi | floatformat:2 | intcomma }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% load static %}
+{% endblock %}

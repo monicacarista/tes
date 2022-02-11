@@ -1,0 +1,140 @@
+{% extends "admin/change_list.html" %}
+
+
+{% block extrahead %}
+{{ block.super }}
+{{ media.js }}
+<style>
+  .field-material_usage,
+  .field-finished_goods,
+  .field-hold_qc,
+  .field-byproduct,
+  .field-pkg_reject,
+  .field-selisih_material,
+  .field-pemakaian_scrap,
+  .field-durasi_pengerjaan,
+  .field-durasi_downtime,
+  .field-eff_rm,
+  .field-fty,
+  .field-availability,
+  .field-performance,
+  .field-oee,
+  .field-finished_good,
+  .field-rm,
+  .field-rm_,
+  .field-hold,
+  .field-reject,
+  .field-trimming,
+  .field-waste,
+  .field-hold_,
+  .field-reject_,
+  .field-trimming_,
+  .field-waste_,
+  .field-fg,
+  .field-fg_lm,
+  .field-fg_m2,
+  .field-fg_,
+  .field-fg_lm_,
+  .field-fg_m2_,
+  .field-fg_LM,
+  .field-fg_M2,
+  .field-reject_eqvl,
+  .field-eff_hour,
+  .field-downtime,
+  .field-trimming,
+  .field-waste,
+  .field-output_std,
+  .field-fg_qty,
+  .field-fg_unit,
+  .field-pemakaian_fresh,
+  .field-fg_teori,
+  .field-persentase_scrap {
+    text-align: right;
+  }
+
+  .results>table>tbody>tr>td,
+  .results>table>tbody>tr>th,
+  #changelist table tbody tr {
+    border: 1px solid #eee;
+    padding: 3px;
+    white-space: nowrap;
+  }
+
+  tfoot td {
+    border: 1px solid #eee;
+    padding: 3px;
+
+    text-align: right;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .results {
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  .results>table>thead>tr>th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+  }
+
+  .results>table>thead>tr>th> .text,
+  #changelist table thead th {
+    white-space: normal;
+  }
+
+  .results>table>thead>tr>th:nth-child(2),
+  .results>table>tfoot>tr>td:nth-child(2) {
+    z-index: 11;
+    position: sticky;
+    left: 0;
+  }
+
+  .results>table>tbody>tr>th {
+    z-index: 1;
+    position: sticky;
+    left: 0;
+    background: #f9f9f9;
+  }
+
+  @media print {
+
+    .results {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function selectElementContents(el) {
+    var body = document.body, range, sel;
+    if (document.createRange && window.getSelection) {
+        range = document.createRange();
+        sel = window.getSelection();
+        sel.removeAllRanges();
+        try {
+            range.selectNodeContents(el);
+            sel.addRange(range);
+        } catch (e) {
+            range.selectNode(el);
+            sel.addRange(range);
+        }
+    } else if (body.createTextRange) {
+        range = body.createTextRange();
+        range.moveToElementText(el);
+        range.select();
+        document.execCommand("copy");
+    }
+  }
+</script>
+
+{% endblock %}
+
+
+{% block result_list %}
+{{ block.super }}
+<input type="button" value="Select Table" onclick="selectElementContents( document.getElementById('result_list') );" style="float:right">
+{% endblock %}
